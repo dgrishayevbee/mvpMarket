@@ -27,6 +27,14 @@
   flex-shrink: 0;
 }
 
+.solution-card__image {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-tile);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .solution-card__tags {
   display: flex;
   flex-wrap: wrap;

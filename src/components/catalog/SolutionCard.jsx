@@ -13,7 +13,11 @@ export function SolutionCard({ product }) {
   return (
     <div className="solution-card">
       <div className="solution-card__head">
-        <span className="solution-card__icon">{product.icon}</span>
+        {product.imageUrl ? (
+          <img src={product.imageUrl} alt="" className="solution-card__image" />
+        ) : (
+          <span className="solution-card__icon">{product.icon}</span>
+        )}
         <div className="solution-card__tags">
           {product.tags?.map((tag) => (
             <Badge key={tag} variant={tag === "Хит" || tag === "Новинка" ? "solid" : "neutral"}>

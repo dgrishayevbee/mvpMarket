@@ -1,6 +1,6 @@
 import { Button } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
-import { bundles } from "../../data/bundles.js";
+import { useContent } from "../../context/ContentContext.jsx";
 import "./BundleCarousel.css";
 
 function formatPrice(value) {
@@ -9,6 +9,8 @@ function formatPrice(value) {
 
 export function BundleCarousel() {
   const { addItem } = useCart();
+  const { content } = useContent();
+  const bundles = content.bundles;
 
   return (
     <section className="bundle-carousel">

@@ -66,6 +66,15 @@
   color: var(--color-text-secondary);
 }
 
+.footer__bottom a {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+.footer__bottom a:hover {
+  color: var(--color-ink);
+}
+
 @media (max-width: 900px) {
   .footer__columns {
     grid-template-columns: repeat(2, 1fr);

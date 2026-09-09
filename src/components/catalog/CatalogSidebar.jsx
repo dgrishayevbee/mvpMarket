@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import { categories, quickLinks, supportLinks } from "../../data/categories.js";
+import { useContent } from "../../context/ContentContext.jsx";
 import "./CatalogSidebar.css";
 
 export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }) {
+  const { content } = useContent();
+  const { categories, quickLinks, supportLinks } = content;
+
   return (
     <nav className="catalog-sidebar">
       <div className="catalog-sidebar__group">

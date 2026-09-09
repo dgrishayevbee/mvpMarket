@@ -2,16 +2,16 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { useProducts } from "../../context/ProductsContext.jsx";
-import { categories } from "../../data/categories.js";
+import { useContent } from "../../context/ContentContext.jsx";
 import { Button, Input, Textarea } from "../../components/ui/index.js";
 import "./SellerProductFormPage.css";
-
-const EMPTY = { title: "", category: categories[0].id, price: "", stock: "", description: "" };
 
 export function SellerProductFormPage() {
   const { id } = useParams();
   const { user } = useAuth();
   const { getById, addProduct, updateProduct } = useProducts();
+  const { content } = useContent();
+  const categories = content.categories;
   const navigate = useNavigate();
 
   const existing = id ? getById(id) : null;
@@ -24,7 +24,7 @@ export function SellerProductFormPage() {
           stock: existing.stock,
           description: existing.description,
         }
-      : EMPTY
+      : { title: "", category: categories[0].id, price: "", stock: "", description: "" }
   );
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SegmentedControl, Slider, Button, PlaceholderImage } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
-import { tariffs } from "../../data/tariffs.js";
+import { useContent } from "../../context/ContentContext.jsx";
 import "./BusinessChoiceSection.css";
 
 function formatPrice(value) {
@@ -18,7 +18,7 @@ function InteractiveTariffCard({ tariff }) {
 
   const connect = () => {
     addItem({
-      id: `${tariff.id}-${speed}-${limitMode}-${gb}`,
+      id: `tariff-${speed}-${limitMode}-${gb}`,
       title: `Интернет ${speed} Мбит/с${limitMode === "unlimited" ? ", безлимит" : `, ${gb} ГБ`}`,
       price: tariff.basePrice,
       seller: "mvpMarket",
@@ -75,7 +75,11 @@ function SimpleTariffCard({ tariff }) {
   return (
     <div className="tariff-card tariff-card--simple">
       <div className="tariff-card__media">
-        <PlaceholderImage label={tariff.icon} height="72px" />
+        {tariff.imageUrl ? (
+          <img src={tariff.imageUrl} alt={tariff.title} className="tariff-card__image" />
+        ) : (
+          <PlaceholderImage label={tariff.icon} height="72px" />
+        )}
       </div>
       <div className="tariff-card__info">
         <span className="tariff-card__title">{tariff.title}</span>
@@ -99,17 +103,17 @@ function SimpleTariffCard({ tariff }) {
 }
 
 export function BusinessChoiceSection() {
+  const { content } = useContent();
+  const { sectionTitle, interactiveTariff, simpleTariffs } = content.businessChoice;
+
   return (
     <section className="business-choice">
-      <h2 className="business-choice__title">Что выбирают предприниматели</h2>
+      <h2 className="business-choice__title">{sectionTitle}</h2>
       <div className="business-choice__grid">
-        {tariffs.map((t) =>
-          t.kind === "interactive" ? (
-            <InteractiveTariffCard key={t.id} tariff={t} />
-          ) : (
-            <SimpleTariffCard key={t.id} tariff={t} />
-          )
-        )}
+        <InteractiveTariffCard tariff={interactiveTariff} />
+        {simpleTariffs.map((t) => (
+          <SimpleTariffCard key={t.id} tariff={t} />
+        ))}
       </div>
     </section>
   );

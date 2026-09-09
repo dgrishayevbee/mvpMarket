@@ -1,9 +1,11 @@
 import { forwardRef } from "react";
+import { useContent } from "../../context/ContentContext.jsx";
 import "./HeroSearch.css";
 
-const QUICK_PROMPTS = ["Обслужить себя", "Открыть офис", "Автоматизировать продажи", "Подобрать бизнес"];
-
 export const HeroSearch = forwardRef(function HeroSearch({ value, onChange, onSubmit }, ref) {
+  const { content } = useContent();
+  const { hero } = content;
+
   const submit = (e) => {
     e.preventDefault();
     onSubmit(value);
@@ -11,17 +13,13 @@ export const HeroSearch = forwardRef(function HeroSearch({ value, onChange, onSu
 
   return (
     <section className="hero-search" ref={ref}>
-      <h1 className="hero-search__title">
-        Подберём инфраструктуру
-        <br />
-        для вашего бизнеса
-      </h1>
+      <h1 className="hero-search__title">{hero.title}</h1>
 
       <form className="hero-search__bar" onSubmit={submit}>
         <span className="hero-search__icon">✦</span>
         <input
           className="hero-search__input"
-          placeholder="Опишите вашу задачу или спросите ИИ…"
+          placeholder={hero.searchPlaceholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
         />
@@ -35,7 +33,7 @@ export const HeroSearch = forwardRef(function HeroSearch({ value, onChange, onSu
       </button>
 
       <div className="hero-search__prompts">
-        {QUICK_PROMPTS.map((p) => (
+        {hero.prompts.map((p) => (
           <button key={p} type="button" className="hero-search__prompt" onClick={() => onSubmit(p)}>
             {p}
           </button>

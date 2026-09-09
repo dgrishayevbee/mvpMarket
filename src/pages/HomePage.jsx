@@ -1,7 +1,7 @@
 import { useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../context/ProductsContext.jsx";
-import { segments } from "../data/categories.js";
+import { useContent } from "../context/ContentContext.jsx";
 import { CatalogSidebar } from "../components/catalog/CatalogSidebar.jsx";
 import { HeroSearch } from "../components/catalog/HeroSearch.jsx";
 import { SolutionCard } from "../components/catalog/SolutionCard.jsx";
@@ -31,6 +31,7 @@ function matchesQuery(product, query) {
 
 export function HomePage() {
   const { all } = useProducts();
+  const { content } = useContent();
   const [searchParams, setSearchParams] = useSearchParams();
   const query = (searchParams.get("q") || "").toLowerCase();
 
@@ -93,7 +94,7 @@ export function HomePage() {
           <HeroSearch ref={heroRef} value={heroValue} onChange={setHeroValue} onSubmit={commitSearch} />
 
           <div className="home-page__toolbar">
-            <Tabs tabs={segments} activeId={segment} onChange={setSegment} />
+            <Tabs tabs={content.segments} activeId={segment} onChange={setSegment} />
             <div className="home-page__toolbar-actions">
               <select
                 className="home-page__sort"

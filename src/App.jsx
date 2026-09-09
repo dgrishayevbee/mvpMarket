@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { ContentProvider } from "./context/ContentContext.jsx";
 import { ProductsProvider } from "./context/ProductsContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import { FavoritesProvider } from "./context/FavoritesContext.jsx";
@@ -14,6 +15,7 @@ import { CheckoutPage } from "./pages/CheckoutPage.jsx";
 import { LoginPage } from "./pages/LoginPage.jsx";
 import { RegisterPage } from "./pages/RegisterPage.jsx";
 import { ProfilePage } from "./pages/ProfilePage.jsx";
+import { AdminPage } from "./pages/AdminPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage.jsx";
 
 import { SellerLayout } from "./pages/seller/SellerLayout.jsx";
@@ -25,15 +27,17 @@ import { SellerOrdersPage } from "./pages/seller/SellerOrdersPage.jsx";
 function AppProviders({ children }) {
   return (
     <AuthProvider>
-      <ProductsProvider>
-        <CartProvider>
-          <FavoritesProvider>
-            <OrdersProvider>
-              <UIProvider>{children}</UIProvider>
-            </OrdersProvider>
-          </FavoritesProvider>
-        </CartProvider>
-      </ProductsProvider>
+      <ContentProvider>
+        <ProductsProvider>
+          <CartProvider>
+            <FavoritesProvider>
+              <OrdersProvider>
+                <UIProvider>{children}</UIProvider>
+              </OrdersProvider>
+            </FavoritesProvider>
+          </CartProvider>
+        </ProductsProvider>
+      </ContentProvider>
     </AuthProvider>
   );
 }
@@ -51,6 +55,7 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/admin" element={<AdminPage />} />
 
             <Route path="/seller" element={<SellerLayout />}>
               <Route index element={<SellerDashboardPage />} />

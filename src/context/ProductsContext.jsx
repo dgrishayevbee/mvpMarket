@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
-import { seedProducts } from "../data/products.js";
+import { useContent } from "./ContentContext.jsx";
 
 const ProductsContext = createContext(null);
 
@@ -9,10 +9,11 @@ function makeId() {
 }
 
 export function ProductsProvider({ children }) {
+  const { content } = useContent();
   const [sellerProducts, setSellerProducts] = useLocalStorage("mvpmarket:seller-products", []);
 
   const value = useMemo(() => {
-    const all = [...sellerProducts, ...seedProducts];
+    const all = [...sellerProducts, ...content.solutions];
 
     const getById = (id) => all.find((p) => p.id === id) || null;
 
@@ -41,7 +42,7 @@ export function ProductsProvider({ children }) {
     };
 
     return { all, getById, listBySeller, addProduct, updateProduct, deleteProduct };
-  }, [sellerProducts, setSellerProducts]);
+  }, [sellerProducts, setSellerProducts, content.solutions]);
 
   return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;
 }

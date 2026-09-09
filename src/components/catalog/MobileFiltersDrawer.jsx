@@ -1,7 +1,7 @@
 import { Drawer } from "../overlay/Drawer.jsx";
 import { CatalogSidebar } from "./CatalogSidebar.jsx";
 import { Tabs } from "../ui/index.js";
-import { segments } from "../../data/categories.js";
+import { useContent } from "../../context/ContentContext.jsx";
 import "./MobileFiltersDrawer.css";
 
 export function MobileFiltersDrawer({
@@ -13,11 +13,13 @@ export function MobileFiltersDrawer({
   onSegmentChange,
   onQuickLink,
 }) {
+  const { content } = useContent();
+
   return (
     <Drawer open={open} onClose={onClose} title="Фильтры">
       <div className="mobile-filters">
         <span className="mobile-filters__label">Раздел</span>
-        <Tabs tabs={segments} activeId={activeSegment} onChange={onSegmentChange} />
+        <Tabs tabs={content.segments} activeId={activeSegment} onChange={onSegmentChange} />
         <span className="mobile-filters__label">Категории</span>
         <CatalogSidebar
           activeCategory={activeCategory}
