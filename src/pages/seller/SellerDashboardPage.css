@@ -1,0 +1,34 @@
+.seller-dashboard__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.seller-dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.seller-dashboard__stat {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.seller-dashboard__stat-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.seller-dashboard__stat-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.seller-dashboard__note {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+}

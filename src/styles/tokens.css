@@ -1,0 +1,108 @@
+/*
+  Design tokens — draft v0.1, extracted from the design-system export provided
+  2026-09-09 (Claude Design .dc.html draft). Swap values here when the final
+  design system arrives; components should never hardcode these values.
+*/
+:root {
+  /* Color — brand */
+  --color-brand-yellow: #ffcc00;
+  --color-brand-yellow-press: #f2c200;
+
+  /* Color — ink / text */
+  --color-ink: #1a1a1a;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #6b6b6b;
+  --color-text-tertiary: #9e9e9e;
+  --color-text-on-dark: #ffffff;
+
+  /* Color — surfaces */
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f4f2;
+  --color-surface-muted-hover: #ececea;
+
+  /* Color — borders */
+  --color-border: #ececec;
+  --color-border-strong: #e0e0e0;
+
+  /* Color — status */
+  --color-success: #17a34a;
+  --color-success-bg: #e7f6ec;
+  --color-success-text: #10783a;
+  --color-error: #e5372b;
+  --color-info: #2f80ed;
+
+  /* Color — badges */
+  --color-badge-new-bg: #fff1b8;
+  --color-badge-new-text: #7a6100;
+
+  /* Gradients — use at most once per screen */
+  --gradient-promo: linear-gradient(100deg, #ff5f7e 0%, #ff8a3d 52%, #ffc93d 100%);
+  --gradient-hero-glow: radial-gradient(
+    45% 55% at 60% 40%,
+    rgba(255, 140, 90, 0.28),
+    rgba(255, 205, 0, 0.14) 45%,
+    rgba(255, 255, 255, 0) 72%
+  );
+
+  /* Typography */
+  --font-sans: "Onest", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --text-display-size: 44px;
+  --text-display-line: 48px;
+  --text-display-weight: 700;
+
+  --text-h1-size: 30px;
+  --text-h1-line: 36px;
+  --text-h1-weight: 700;
+
+  --text-h2-size: 20px;
+  --text-h2-line: 26px;
+  --text-h2-weight: 600;
+
+  --text-body-size: 15px;
+  --text-body-line: 23px;
+  --text-body-weight: 400;
+
+  --text-caption-size: 13px;
+  --text-caption-line: 19px;
+  --text-caption-weight: 400;
+
+  --text-overline-size: 11px;
+  --text-overline-weight: 600;
+  --text-overline-tracking: 0.12em;
+
+  --tracking-tight: -0.02em;
+  --tracking-tight-sm: -0.01em;
+
+  /* Spacing — 4px base grid */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Radii */
+  --radius-input: 8px;
+  --radius-tile: 12px;
+  --radius-card: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --header-height: 72px;
+  --content-max-width: 1120px;
+  --drawer-width: 420px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 160ms;
+  --duration-base: 240ms;
+}

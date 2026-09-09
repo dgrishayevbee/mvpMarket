@@ -1,0 +1,50 @@
+.quick-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.quick-view__media {
+  border-radius: var(--radius-tile);
+  overflow: hidden;
+}
+
+.quick-view__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-view__badges {
+  display: flex;
+  gap: 6px;
+}
+
+.quick-view__title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.quick-view__seller {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.quick-view__description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.quick-view__actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .quick-view {
+    grid-template-columns: 1fr;
+  }
+}

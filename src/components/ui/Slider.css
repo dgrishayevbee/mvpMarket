@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.slider__label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.slider__value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.slider__input {
+  width: 100%;
+  accent-color: var(--color-brand-yellow);
+}
