@@ -1,0 +1,93 @@
+.bundle-carousel__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.bundle-carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.bundle-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+
+.bundle-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bundle-card__title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.bundle-card__subtitle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.bundle-card__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+.bundle-card__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bundle-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.bundle-card__check {
+  color: var(--color-success);
+  font-size: 12px;
+}
+
+.bundle-card__footer {
+  margin-top: auto;
+  padding-top: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bundle-card__from-label {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+
+.bundle-card__from {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+}

@@ -1,0 +1,115 @@
+.business-choice__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.business-choice__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.tariff-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-card);
+  padding: 20px;
+}
+
+.tariff-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tariff-card__price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tariff-card__speeds {
+  display: flex;
+  gap: 6px;
+}
+
+.tariff-card__speed {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: var(--radius-tile);
+  border: 0;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tariff-card__speed--active {
+  background: var(--color-ink);
+  color: var(--color-text-on-dark);
+  font-weight: 600;
+}
+
+.tariff-card--simple {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.tariff-card__media {
+  border-radius: var(--radius-tile);
+  overflow: hidden;
+}
+
+.tariff-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tariff-card__title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tariff-card__subtitle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.tariff-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tariff-card__from {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tariff-card__connect {
+  border: 0;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tariff-card__connect:hover {
+  background: var(--color-brand-yellow);
+}
+
+@media (max-width: 900px) {
+  .business-choice__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

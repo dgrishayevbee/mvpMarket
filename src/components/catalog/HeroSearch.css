@@ -1,0 +1,103 @@
+.hero-search {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  padding: 40px 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.hero-search::before {
+  content: "";
+  position: absolute;
+  inset: -40% -10% auto 30%;
+  height: 320px;
+  background: var(--gradient-hero-glow);
+  pointer-events: none;
+}
+
+.hero-search__title {
+  position: relative;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  max-width: 20ch;
+}
+
+.hero-search__bar {
+  position: relative;
+  width: min(560px, 100%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+.hero-search__icon {
+  color: #ff9a3d;
+  font-size: 15px;
+}
+
+.hero-search__input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.hero-search__submit {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  border: 0;
+  background: var(--color-brand-yellow);
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hero-search__voice {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.hero-search__prompts {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-search__prompt {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.hero-search__prompt:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
