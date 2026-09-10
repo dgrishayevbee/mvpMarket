@@ -60,6 +60,12 @@
   flex-shrink: 0;
 }
 
+.tech-carousel--static .tech-carousel__icon {
+  width: var(--space-12);
+  height: var(--space-12);
+  border-radius: var(--radius-tile);
+}
+
 .tech-carousel__label {
   font-size: 11px;
   line-height: 1.3;

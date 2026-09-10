@@ -16,7 +16,7 @@ export function TechIconCarousel({ items, static: isStatic = false }) {
   const showNav = !isStatic && pageCount > 1;
 
   return (
-    <div className="tech-carousel">
+    <div className={"tech-carousel" + (isStatic ? " tech-carousel--static" : "")}>
       <div className="tech-carousel__row">
         {showNav && (
           <button
