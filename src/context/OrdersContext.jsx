@@ -11,14 +11,14 @@ export function OrdersProvider({ children }) {
   const [orders, setOrders] = useLocalStorage("mvpmarket:orders", []);
 
   const value = useMemo(() => {
-    const createOrder = ({ items, total, address, buyerEmail }) => {
+    const createOrder = ({ items, total, payment, buyerEmail }) => {
       const order = {
         id: makeOrderId(),
         date: new Date().toISOString(),
         status: "Оформлен",
         items,
         total,
-        address,
+        payment,
         buyerEmail,
       };
       setOrders((prev) => [order, ...prev]);

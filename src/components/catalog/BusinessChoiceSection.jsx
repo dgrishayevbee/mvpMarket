@@ -22,6 +22,13 @@ function InteractiveTariffCard({ tariff }) {
       title: `Интернет ${speed} Мбит/с${limitMode === "unlimited" ? ", безлимит" : `, ${gb} ГБ`}`,
       price: tariff.basePrice,
       seller: "mvpMarket",
+      subtitle: "Интернет для бизнеса",
+      icon: "🌐",
+      features: [
+        `Скорость ${speed} Мбит/с`,
+        limitMode === "unlimited" ? "Безлимитный трафик" : `${gb} ГБ трафика в месяц`,
+        "Подключение без визита в офис",
+      ],
     });
   };
 
@@ -93,7 +100,17 @@ function SimpleTariffCard({ tariff }) {
         <button
           type="button"
           className="tariff-card__connect"
-          onClick={() => addItem({ id: tariff.id, title: tariff.title, price: tariff.price, seller: "mvpMarket" })}
+          onClick={() =>
+            addItem({
+              id: tariff.id,
+              title: tariff.title,
+              price: tariff.price,
+              seller: "mvpMarket",
+              subtitle: tariff.subtitle,
+              icon: tariff.icon,
+              imageUrl: tariff.imageUrl,
+            })
+          }
         >
           Подключить
         </button>

@@ -21,6 +21,13 @@ export function CartProvider({ children }) {
             price: product.price,
             seller: product.seller,
             qty,
+            // Витринные поля карточки — чтобы на оформлении заказа показать
+            // тот же вид карточки, что и на главной, без похода в контент.
+            subtitle: product.subtitle || "",
+            icon: product.icon || "",
+            imageUrl: product.imageUrl || "",
+            features: product.features || [],
+            tags: product.tags || [],
           },
         ];
       });
