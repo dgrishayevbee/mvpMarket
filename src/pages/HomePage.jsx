@@ -126,10 +126,10 @@ export function HomePage() {
 
           <VideoBlock />
           <BusinessChoiceSection />
+          <AIBanner onSuggestion={commitSearch} />
           <div ref={bundlesRef}>
             <BundleCarousel />
           </div>
-          <AIBanner onSuggestion={commitSearch} />
         </div>
       </div>
 

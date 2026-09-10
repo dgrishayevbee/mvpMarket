@@ -49,16 +49,13 @@ export function ContentProvider({ children }) {
       updateCategory: (id, patch) => updateItem("categories", id, patch),
       removeCategory: (id) => removeItem("categories", id),
 
-      updateQuickLink: (id, patch) =>
-        setContent((c) => ({
-          ...c,
-          quickLinks: c.quickLinks.map((item) => (item.id === id ? { ...item, ...patch } : item)),
-        })),
-      updateSupportLink: (id, patch) =>
-        setContent((c) => ({
-          ...c,
-          supportLinks: c.supportLinks.map((item) => (item.id === id ? { ...item, ...patch } : item)),
-        })),
+      addQuickLink: (item) => addItem("quickLinks", item, "quick"),
+      updateQuickLink: (id, patch) => updateItem("quickLinks", id, patch),
+      removeQuickLink: (id) => removeItem("quickLinks", id),
+
+      addSupportLink: (item) => addItem("supportLinks", item, "support"),
+      updateSupportLink: (id, patch) => updateItem("supportLinks", id, patch),
+      removeSupportLink: (id) => removeItem("supportLinks", id),
 
       addSegment: (item) => addItem("segments", item, "seg"),
       updateSegment: (id, patch) => updateItem("segments", id, patch),

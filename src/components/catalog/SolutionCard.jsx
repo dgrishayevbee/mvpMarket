@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Badge, Button } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
+import { TechIconCarousel } from "./TechIconCarousel.jsx";
+import { FeatureIcon } from "./featureIcons.jsx";
 import "./SolutionCard.css";
 
 function formatPrice(value) {
@@ -32,10 +34,12 @@ export function SolutionCard({ product }) {
       </Link>
       <span className="solution-card__subtitle">{product.subtitle}</span>
 
+      <TechIconCarousel items={product.features} />
+
       <ul className="solution-card__features">
         {product.features.map((f) => (
           <li key={f}>
-            <span className="solution-card__check">✓</span>
+            <FeatureIcon text={f} className="solution-card__check" />
             {f}
           </li>
         ))}

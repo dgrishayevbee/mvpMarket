@@ -1,22 +1,24 @@
 // Единый источник контента главной страницы — редактируется через /admin
 // (см. src/context/ContentContext.jsx). Значения ниже — дефолты, которые
 // используются, пока в localStorage нет сохранённых правок.
+//
+// Текущие дефолты включают правки, присланные пользователем 2026-09-10
+// (docs/content-template.json) — сокращённый список категорий, переименованные
+// готовые пакеты/цены. Пустой quickLink "new" (label: "") из присланного файла
+// убран — пустой лейбл был попыткой удалить пункт до того, как в /admin
+// появилась кнопка удаления для быстрых ссылок.
 export const defaultContent = {
   categories: [
     { id: "employees", label: "Для работы сотрудников", icon: "👥" },
     { id: "internet", label: "Интернет для бизнеса", icon: "🌐" },
     { id: "sales", label: "Продажи и работа с клиентами", icon: "💬" },
     { id: "management", label: "Управление бизнесом", icon: "📊" },
-    { id: "it-cloud", label: "IT и облачная инфраструктура", icon: "☁️" },
-    { id: "security", label: "Безопасность", icon: "🛡️" },
-    { id: "automation", label: "Автоматизация и IoT", icon: "⚙️" },
     { id: "ai", label: "AI для бизнеса", icon: "✦" },
   ],
 
   quickLinks: [
     { id: "bundles", label: "Готовые пакеты", icon: "📦" },
     { id: "popular", label: "Популярные решения", icon: "⭐" },
-    { id: "new", label: "Новинки", icon: "🆕" },
     { id: "favorites", label: "Избранное", icon: "♡", to: "/profile#favorites" },
     { id: "subscriptions", label: "Мои подписки", icon: "🔁", to: "/profile" },
     { id: "orders", label: "История заказов", icon: "🧾", to: "/profile" },
@@ -210,7 +212,7 @@ export const defaultContent = {
   bundles: [
     {
       id: "bundle-small-office",
-      title: "Малый офис",
+      title: "Kense solo",
       subtitle: "Всё для продуктивной работы небольшой команды",
       price: 7900,
       seller: "mvpMarket",
@@ -218,27 +220,19 @@ export const defaultContent = {
     },
     {
       id: "bundle-corporate",
-      title: "Корпоративный офис",
+      title: "Business Office",
       subtitle: "Полная ИТ-инфраструктура крупного бизнеса",
-      price: 6738,
+      price: 11000,
       seller: "mvpMarket",
       features: ["Интернет 1 Гбит/с", "Корпоративная связь", "Видеонаблюдение Pro", "Облачные серверы"],
     },
     {
       id: "bundle-cloud-storage",
-      title: "Облачное хранилище",
+      title: "Business Trade",
       subtitle: "Безопасное хранение данных для бизнеса",
-      price: 1420,
+      price: 14990,
       seller: "mvpMarket",
       features: ["Резервное копирование", "100 ГБ хранилища", "Шифрование данных", "Облачные бэкапы"],
-    },
-    {
-      id: "bundle-online-store",
-      title: "Интернет-магазин",
-      subtitle: "Готовая инфраструктура для онлайн-продаж",
-      price: 5490,
-      seller: "mvpMarket",
-      features: ["Хостинг сайта", "Приём онлайн-оплаты", "CRM для заказов", "SMS-уведомления"],
     },
   ],
 

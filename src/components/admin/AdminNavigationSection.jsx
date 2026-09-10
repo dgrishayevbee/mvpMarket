@@ -28,8 +28,12 @@ export function AdminNavigationSection() {
     addSegment,
     updateSegment,
     removeSegment,
+    addQuickLink,
     updateQuickLink,
+    removeQuickLink,
+    addSupportLink,
     updateSupportLink,
+    removeSupportLink,
   } = useContent();
 
   return (
@@ -91,9 +95,20 @@ export function AdminNavigationSection() {
                 value={item.label}
                 onChange={(e) => updateQuickLink(item.id, { label: e.target.value })}
               />
+              <button
+                type="button"
+                className="admin-row__remove"
+                onClick={() => removeQuickLink(item.id)}
+                aria-label="Удалить"
+              >
+                ✕
+              </button>
             </div>
           ))}
         </div>
+        <Button variant="secondary" size="sm" onClick={() => addQuickLink({ label: "Новая ссылка", icon: "🔗" })}>
+          + Добавить ссылку
+        </Button>
       </div>
 
       <div className="admin-field">
@@ -105,9 +120,24 @@ export function AdminNavigationSection() {
                 value={item.label}
                 onChange={(e) => updateSupportLink(item.id, { label: e.target.value })}
               />
+              <button
+                type="button"
+                className="admin-row__remove"
+                onClick={() => removeSupportLink(item.id)}
+                aria-label="Удалить"
+              >
+                ✕
+              </button>
             </div>
           ))}
         </div>
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={() => addSupportLink({ label: "Новая ссылка", icon: "❓" })}
+        >
+          + Добавить ссылку
+        </Button>
       </div>
     </div>
   );

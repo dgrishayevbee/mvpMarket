@@ -1,6 +1,8 @@
 import { Button } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
 import { useContent } from "../../context/ContentContext.jsx";
+import { TechIconCarousel } from "./TechIconCarousel.jsx";
+import { FeatureIcon } from "./featureIcons.jsx";
 import "./BundleCarousel.css";
 
 function formatPrice(value) {
@@ -22,11 +24,13 @@ export function BundleCarousel() {
               <span className="bundle-card__title">{b.title}</span>
               <span className="bundle-card__subtitle">{b.subtitle}</span>
             </div>
-            <span className="bundle-card__label">Доступные технологии:</span>
+
+            <TechIconCarousel items={b.features} />
+
             <ul className="bundle-card__features">
               {b.features.map((f) => (
                 <li key={f}>
-                  <span className="bundle-card__check">✓</span>
+                  <FeatureIcon text={f} className="bundle-card__check" />
                   {f}
                 </li>
               ))}

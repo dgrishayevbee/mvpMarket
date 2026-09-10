@@ -71,9 +71,14 @@
 }
 
 .solution-card__check {
-  color: var(--color-success);
-  font-size: 12px;
+  display: inline-flex;
+  color: var(--color-text-secondary);
   flex-shrink: 0;
+}
+
+.solution-card__check svg {
+  width: 16px;
+  height: 16px;
 }
 
 .solution-card__footer {
