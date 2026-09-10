@@ -96,6 +96,10 @@
   --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.1);
 
+  /* Component sizes */
+  --size-icon-tile: 64px;
+  --size-bundle-card-min: 380px;
+
   /* Layout */
   --header-height: 72px;
   --content-max-width: 1120px;
