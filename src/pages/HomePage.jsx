@@ -93,6 +93,10 @@ export function HomePage() {
         <div className="home-page__main">
           <HeroSearch ref={heroRef} value={heroValue} onChange={setHeroValue} onSubmit={commitSearch} />
 
+          <div ref={bundlesRef}>
+            <BundleCarousel />
+          </div>
+
           <div className="home-page__toolbar">
             <Tabs tabs={content.segments} activeId={segment} onChange={setSegment} />
             <div className="home-page__toolbar-actions">
@@ -127,9 +131,6 @@ export function HomePage() {
           <VideoBlock />
           <BusinessChoiceSection />
           <AIBanner onSuggestion={commitSearch} />
-          <div ref={bundlesRef}>
-            <BundleCarousel />
-          </div>
         </div>
       </div>
 
