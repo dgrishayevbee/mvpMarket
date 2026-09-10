@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Badge, Button } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
 import { TechIconCarousel } from "./TechIconCarousel.jsx";
-import { FeatureIcon } from "./featureIcons.jsx";
+import FeatureIcon from "../common/FeatureIcon.jsx";
+import { solutionIconSrc } from "../../data/iconMap.js";
 import "./SolutionCard.css";
 
 function formatPrice(value) {
@@ -11,15 +12,18 @@ function formatPrice(value) {
 
 export function SolutionCard({ product }) {
   const { addItem } = useCart();
+  const iconSrc = product.imageUrl || solutionIconSrc(product.id);
 
   return (
     <div className="solution-card">
       <div className="solution-card__head">
-        {product.imageUrl ? (
-          <img src={product.imageUrl} alt="" className="solution-card__image" />
-        ) : (
-          <span className="solution-card__icon">{product.icon}</span>
-        )}
+        <span className="solution-card__icon">
+          {iconSrc ? (
+            <img src={iconSrc} alt="" aria-hidden="true" className="solution-card__image" />
+          ) : (
+            product.icon
+          )}
+        </span>
         <div className="solution-card__tags">
           {product.tags?.map((tag) => (
             <Badge key={tag} variant={tag === "Хит" || tag === "Новинка" ? "solid" : "neutral"}>
@@ -39,7 +43,7 @@ export function SolutionCard({ product }) {
       <ul className="solution-card__features">
         {product.features.map((f) => (
           <li key={f}>
-            <FeatureIcon text={f} className="solution-card__check" />
+            <FeatureIcon text={f} size={20} className="solution-card__check" />
             {f}
           </li>
         ))}

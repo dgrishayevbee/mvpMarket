@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_corpcall_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_corpcall_dark" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#454B55"/><stop offset="1" stop-color="#1E2228"/></linearGradient><linearGradient id="f_corpcall_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs>
+<path d="M10 29 v-5 a14 14 0 0 1 28 0 v5" fill="none" stroke="url(#f_corpcall_dark)" stroke-width="4.2" stroke-linecap="round"/>
+<g filter="url(#f_corpcall_sh)">
+  <rect x="5.5" y="25" width="9" height="14" rx="4.5" fill="url(#f_corpcall_y)"/>
+  <rect x="33.5" y="25" width="9" height="14" rx="4.5" fill="url(#f_corpcall_y)"/>
+</g>
+<path d="M38 39 v1.5 a4.5 4.5 0 0 1 -4.5 4.5 h-5.5" fill="none" stroke="url(#f_corpcall_dark)" stroke-width="3" stroke-linecap="round"/>
+<circle cx="26" cy="45" r="3.2" fill="url(#f_corpcall_y)"/></svg>

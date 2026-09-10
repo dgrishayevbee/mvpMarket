@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_pbx_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_pbx_blue" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5BB3F7"/><stop offset="1" stop-color="#1F6FD0"/></linearGradient><linearGradient id="f_pbx_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs>
+<g filter="url(#f_pbx_sh)">
+  <path d="M12 11.5 a4.5 4.5 0 0 1 6.3 -1.2 l3.8 2.7 a4.5 4.5 0 0 1 1.1 6.1 l-2 2.9 a19 19 0 0 0 7.3 7.3 l2.9 -2 a4.5 4.5 0 0 1 6.1 1.1 l2.7 3.8 a4.5 4.5 0 0 1 -1.2 6.3 l-2.7 1.8 c-2.6 1.8 -6.1 1.6 -8.6 -0.2 A38 38 0 0 1 10.4 22.8 c-1.8 -2.5 -2 -6 -0.2 -8.6 z" fill="url(#f_pbx_blue)"/>
+</g>
+<g fill="none" stroke="url(#f_pbx_y)" stroke-width="2.8" stroke-linecap="round">
+  <path d="M30 12 a10 10 0 0 1 7 7"/>
+</g></svg>

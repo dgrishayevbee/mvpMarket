@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_docs_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_docs_ms1" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FF9A5A"/><stop offset="1" stop-color="#F0562A"/></linearGradient><linearGradient id="f_docs_ms2" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#8FD44A"/><stop offset="1" stop-color="#5A9C18"/></linearGradient><linearGradient id="f_docs_ms3" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5BB0F5"/><stop offset="1" stop-color="#1B6FC0"/></linearGradient><linearGradient id="f_docs_ms4" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDD55"/><stop offset="1" stop-color="#F0AE00"/></linearGradient></defs>
+<g filter="url(#f_docs_sh)">
+  <rect x="6"  y="6"  width="17" height="17" rx="4.5" fill="url(#f_docs_ms1)"/>
+  <rect x="25" y="6"  width="17" height="17" rx="4.5" fill="url(#f_docs_ms2)"/>
+  <rect x="6"  y="25" width="17" height="17" rx="4.5" fill="url(#f_docs_ms3)"/>
+  <rect x="25" y="25" width="17" height="17" rx="4.5" fill="url(#f_docs_ms4)"/>
+</g></svg>

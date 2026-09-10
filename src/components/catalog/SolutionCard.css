@@ -32,11 +32,9 @@
 }
 
 .solution-card__image {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-tile);
-  object-fit: cover;
-  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 .solution-card__tags {
@@ -80,9 +78,8 @@
   flex-shrink: 0;
 }
 
-.solution-card__check svg {
-  width: 16px;
-  height: 16px;
+.solution-card__check img {
+  display: block;
 }
 
 .solution-card__footer {

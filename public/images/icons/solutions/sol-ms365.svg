@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"><defs><filter id="sol_ms365_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="sol_ms365_ms1" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FF9A5A"/><stop offset="1" stop-color="#F0562A"/></linearGradient><linearGradient id="sol_ms365_ms2" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#8FD44A"/><stop offset="1" stop-color="#5A9C18"/></linearGradient><linearGradient id="sol_ms365_ms3" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5BB0F5"/><stop offset="1" stop-color="#1B6FC0"/></linearGradient><linearGradient id="sol_ms365_ms4" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDD55"/><stop offset="1" stop-color="#F0AE00"/></linearGradient></defs>
+<g filter="url(#sol_ms365_sh)">
+  <rect x="9"  y="9"  width="29" height="29" rx="7.5" fill="url(#sol_ms365_ms1)"/>
+  <rect x="42" y="9"  width="29" height="29" rx="7.5" fill="url(#sol_ms365_ms2)"/>
+  <rect x="9"  y="42" width="29" height="29" rx="7.5" fill="url(#sol_ms365_ms3)"/>
+  <rect x="42" y="42" width="29" height="29" rx="7.5" fill="url(#sol_ms365_ms4)"/>
+</g>
+<g fill="#FFFFFF" opacity="0.28">
+  <rect x="13" y="13" width="21" height="7" rx="3.5"/>
+  <rect x="46" y="13" width="21" height="7" rx="3.5"/>
+  <rect x="13" y="46" width="21" height="7" rx="3.5"/>
+  <rect x="46" y="46" width="21" height="7" rx="3.5"/>
+</g></svg>

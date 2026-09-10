@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FeatureIcon } from "./featureIcons.jsx";
+import FeatureIcon from "../common/FeatureIcon.jsx";
 import "./TechIconCarousel.css";
 
 const PAGE_SIZE = 3;
@@ -31,7 +31,9 @@ export function TechIconCarousel({ items, static: isStatic = false }) {
         <div className="tech-carousel__items">
           {visible.map((text) => (
             <div key={text} className="tech-carousel__item">
-              <FeatureIcon text={text} className="tech-carousel__icon" />
+              <span className="tech-carousel__icon">
+                <FeatureIcon text={text} size={24} />
+              </span>
               <span className="tech-carousel__label">{text}</span>
             </div>
           ))}

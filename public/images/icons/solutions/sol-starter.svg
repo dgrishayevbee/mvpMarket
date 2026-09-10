@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"><defs><filter id="sol_starter_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="sol_starter_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient><linearGradient id="sol_starter_o" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFA05A"/><stop offset="1" stop-color="#F4632B"/></linearGradient></defs>
+<g filter="url(#sol_starter_sh)">
+  <path d="M12 20 a8 8 0 0 1 8 -8 h20 l14 14 v36 a8 8 0 0 1 -8 8 h-26 a8 8 0 0 1 -8 -8 z" fill="url(#sol_starter_y)"/>
+</g>
+<path d="M40 12 l14 14 h-10 a4 4 0 0 1 -4 -4 z" fill="#E09400"/>
+<rect x="20" y="34" width="26" height="24" rx="5" fill="#242830"/>
+<g stroke="#FFCE3A" stroke-width="2.2" stroke-linecap="round" opacity="0.95">
+  <line x1="20" y1="42" x2="46" y2="42"/>
+  <line x1="20" y1="50" x2="46" y2="50"/>
+  <line x1="33" y1="34" x2="33" y2="58"/>
+</g>
+<g fill="none" stroke="url(#sol_starter_o)" stroke-width="3.6" stroke-linecap="round">
+  <path d="M61 31 a13 13 0 0 1 0 18"/>
+  <path d="M68 24 a22 22 0 0 1 0 32"/>
+</g></svg>

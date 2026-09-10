@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_internet_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_internet_globe" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#4A5568"/><stop offset="1" stop-color="#1B2430"/></linearGradient><linearGradient id="f_internet_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs>
+<g filter="url(#f_internet_sh)"><circle cx="24" cy="24" r="16.5" fill="url(#f_internet_globe)"/></g>
+<g stroke="#FFFFFF" stroke-width="1.7" fill="none" opacity="0.62">
+  <ellipse cx="24" cy="24" rx="16.5" ry="7"/>
+  <ellipse cx="24" cy="24" rx="7.6" ry="16.5"/>
+  <line x1="7.5" y1="24" x2="40.5" y2="24"/>
+</g>
+<circle cx="17.5" cy="16.5" r="2.6" fill="#FFFFFF" opacity="0.30"/>
+<ellipse cx="24" cy="24" rx="21.5" ry="7" fill="none" stroke="url(#f_internet_y)" stroke-width="2.8" transform="rotate(-22 24 24)" stroke-linecap="round"/></svg>

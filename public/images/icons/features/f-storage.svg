@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_storage_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_storage_purple" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#A88BF5"/><stop offset="1" stop-color="#6247D6"/></linearGradient><linearGradient id="f_storage_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs>
+<g filter="url(#f_storage_sh)" fill="url(#f_storage_purple)">
+  <rect x="9" y="13" width="30" height="22"/>
+  <ellipse cx="24" cy="35" rx="15" ry="6"/>
+  <ellipse cx="24" cy="13" rx="15" ry="6"/>
+</g>
+<ellipse cx="24" cy="13" rx="15" ry="6" fill="#FFFFFF" opacity="0.22"/>
+<g fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.65">
+  <path d="M9 21 a15 6 0 0 0 30 0"/>
+  <path d="M9 28 a15 6 0 0 0 30 0"/>
+</g></svg>

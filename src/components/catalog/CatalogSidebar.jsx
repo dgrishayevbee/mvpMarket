@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import { useContent } from "../../context/ContentContext.jsx";
+import NavIcon from "../common/NavIcon.jsx";
+import { navIconId } from "../../data/iconMap.js";
 import "./CatalogSidebar.css";
+
+// В данных лежит либо имя иконки набора ("nav-orders"), либо эмодзи из
+// старого контента в localStorage — тогда подбираем иконку по подписи, а если
+// и она не нашлась, показываем то, что лежит в данных.
+function SidebarIcon({ icon, label }) {
+  const name = icon?.startsWith("nav-") ? icon : navIconId(label);
+  if (name) return <NavIcon name={name} size={20} className="catalog-sidebar__icon" />;
+  return <span className="catalog-sidebar__icon">{icon}</span>;
+}
 
 export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }) {
   const { content } = useContent();
@@ -16,7 +27,7 @@ export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }
           }
           onClick={() => onCategoryChange("all")}
         >
-          <span className="catalog-sidebar__icon">🗂️</span>
+          <SidebarIcon icon="nav-packages" label="Все категории" />
           Все категории
         </button>
         {categories.map((c) => (
@@ -28,7 +39,7 @@ export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }
             }
             onClick={() => onCategoryChange(c.id)}
           >
-            <span className="catalog-sidebar__icon">{c.icon}</span>
+            <SidebarIcon icon={c.icon} label={c.label} />
             {c.label}
           </button>
         ))}
@@ -38,7 +49,7 @@ export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }
         {quickLinks.map((item) =>
           item.to ? (
             <Link key={item.id} to={item.to} className="catalog-sidebar__item">
-              <span className="catalog-sidebar__icon">{item.icon}</span>
+              <SidebarIcon icon={item.icon} label={item.label} />
               {item.label}
             </Link>
           ) : (
@@ -48,7 +59,7 @@ export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }
               className="catalog-sidebar__item"
               onClick={() => onQuickLink(item.id)}
             >
-              <span className="catalog-sidebar__icon">{item.icon}</span>
+              <SidebarIcon icon={item.icon} label={item.label} />
               {item.label}
             </button>
           )
@@ -58,7 +69,7 @@ export function CatalogSidebar({ activeCategory, onCategoryChange, onQuickLink }
       <div className="catalog-sidebar__group">
         {supportLinks.map((item) => (
           <button key={item.id} type="button" className="catalog-sidebar__item" disabled>
-            <span className="catalog-sidebar__icon">{item.icon}</span>
+            <SidebarIcon icon={item.icon} label={item.label} />
             {item.label}
           </button>
         ))}

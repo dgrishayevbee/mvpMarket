@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"><defs><filter id="sol_office_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="sol_office_dark" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#454B55"/><stop offset="1" stop-color="#1E2228"/></linearGradient><linearGradient id="sol_office_screen" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7ECF2"/></linearGradient><linearGradient id="sol_office_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient><linearGradient id="sol_office_o" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFA05A"/><stop offset="1" stop-color="#F4632B"/></linearGradient></defs>
+<g filter="url(#sol_office_sh)">
+  <rect x="8" y="13" width="64" height="44" rx="8" fill="url(#sol_office_dark)"/>
+</g>
+<rect x="13" y="18" width="54" height="34" rx="4.5" fill="url(#sol_office_screen)"/>
+<g>
+  <rect x="19" y="36" width="9" height="11" rx="2.5" fill="#C9D2DC"/>
+  <rect x="32" y="29" width="9" height="18" rx="2.5" fill="url(#sol_office_o)"/>
+  <rect x="45" y="23" width="9" height="24" rx="2.5" fill="url(#sol_office_y)"/>
+</g>
+<rect x="19" y="23" width="17" height="4" rx="2" fill="#DCE3EA"/>
+<rect x="34" y="57" width="12" height="9" fill="#2B313A"/>
+<rect x="24" y="65" width="32" height="6" rx="3" fill="#242830"/></svg>

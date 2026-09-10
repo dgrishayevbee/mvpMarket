@@ -1,6 +1,7 @@
 import { useContent } from "../../context/ContentContext.jsx";
 import { Input, Button } from "../ui/index.js";
 import { StringListEditor } from "./StringListEditor.jsx";
+import { ImageField } from "./ImageField.jsx";
 import "./AdminSections.css";
 
 export function AdminBundlesSection() {
@@ -23,6 +24,11 @@ export function AdminBundlesSection() {
                 onChange={(e) => updateBundle(b.id, { subtitle: e.target.value })}
               />
             </label>
+            <ImageField
+              label="Иконка пакета"
+              value={b.imageUrl}
+              onChange={(imageUrl) => updateBundle(b.id, { imageUrl })}
+            />
             <label className="admin-field">
               <span>Цена, ₸ в месяц</span>
               <Input
@@ -51,7 +57,7 @@ export function AdminBundlesSection() {
       ))}
       <Button
         onClick={() =>
-          addBundle({ title: "Новый пакет", subtitle: "", price: 0, oldPrice: 0, seller: "mvpMarket", features: [] })
+          addBundle({ title: "Новый пакет", subtitle: "", imageUrl: "", price: 0, oldPrice: 0, seller: "mvpMarket", features: [] })
         }
       >
         + Добавить пакет

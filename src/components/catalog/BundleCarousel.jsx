@@ -2,7 +2,8 @@ import { Button } from "../ui/index.js";
 import { useCart } from "../../context/CartContext.jsx";
 import { useContent } from "../../context/ContentContext.jsx";
 import { TechIconCarousel } from "./TechIconCarousel.jsx";
-import { FeatureIcon } from "./featureIcons.jsx";
+import FeatureIcon from "../common/FeatureIcon.jsx";
+import { bundleIconSrc } from "../../data/iconMap.js";
 import "./BundleCarousel.css";
 
 function formatPrice(value) {
@@ -20,9 +21,21 @@ export function BundleCarousel() {
       <div className="bundle-carousel__track">
         {bundles.map((b) => (
           <div key={b.id} className="bundle-card">
-            <div className="bundle-card__info">
-              <span className="bundle-card__title">{b.title}</span>
-              <span className="bundle-card__subtitle">{b.subtitle}</span>
+            <div className="bundle-card__head">
+              {(b.imageUrl || bundleIconSrc(b.title)) && (
+                <span className="bundle-card__icon">
+                  <img
+                    src={b.imageUrl || bundleIconSrc(b.title)}
+                    alt=""
+                    aria-hidden="true"
+                    className="bundle-card__image"
+                  />
+                </span>
+              )}
+              <div className="bundle-card__info">
+                <span className="bundle-card__title">{b.title}</span>
+                <span className="bundle-card__subtitle">{b.subtitle}</span>
+              </div>
             </div>
 
             <TechIconCarousel items={b.features} static />
@@ -30,7 +43,7 @@ export function BundleCarousel() {
             <ul className="bundle-card__features">
               {b.features.map((f) => (
                 <li key={f}>
-                  <FeatureIcon text={f} className="bundle-card__check" />
+                  <FeatureIcon text={f} size={20} className="bundle-card__check" />
                   {f}
                 </li>
               ))}

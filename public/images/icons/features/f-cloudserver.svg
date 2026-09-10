@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_cloudserver_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_cloudserver_blue" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5BB3F7"/><stop offset="1" stop-color="#1F6FD0"/></linearGradient><linearGradient id="f_cloudserver_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient></defs>
+<g filter="url(#f_cloudserver_sh)" fill="url(#f_cloudserver_blue)">
+  <circle cx="17" cy="19" r="10"/>
+  <circle cx="31" cy="18" r="8.5"/>
+  <circle cx="24" cy="24" r="9"/>
+  <rect x="7" y="24" width="34" height="11" rx="5.5"/>
+</g>
+<g fill="#FFFFFF" opacity="0.95">
+  <rect x="14" y="25.5" width="20" height="3.8" rx="1.9"/>
+  <rect x="14" y="30.5" width="20" height="3.8" rx="1.9"/>
+</g>
+<circle cx="17.5" cy="27.4" r="1.25" fill="url(#f_cloudserver_blue)"/>
+<circle cx="17.5" cy="32.4" r="1.25" fill="url(#f_cloudserver_blue)"/></svg>

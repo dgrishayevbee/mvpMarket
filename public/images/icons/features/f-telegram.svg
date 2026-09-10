@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_telegram_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_telegram_bluel" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#8FCBFB"/><stop offset="1" stop-color="#3E90E0"/></linearGradient><linearGradient id="f_telegram_blue" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5BB3F7"/><stop offset="1" stop-color="#1F6FD0"/></linearGradient></defs>
+<g stroke="url(#f_telegram_bluel)" stroke-width="3" stroke-linecap="round" opacity="0.45">
+  <line x1="4.5" y1="28.5" x2="11" y2="28.5"/>
+  <line x1="8" y1="35.5" x2="16.5" y2="35.5"/>
+</g>
+<g filter="url(#f_telegram_sh)" stroke-linejoin="round">
+  <path d="M43 6.5 L12 20.5 L22.6 24.8 Z" fill="url(#f_telegram_bluel)" stroke="url(#f_telegram_bluel)" stroke-width="2.4"/>
+  <path d="M43 6.5 L22.6 24.8 L26.6 40.5 Z" fill="url(#f_telegram_blue)" stroke="url(#f_telegram_blue)" stroke-width="2.4"/>
+</g>
+<path d="M43 6.5 L22.6 24.8" stroke="#FFFFFF" stroke-width="1.4" opacity="0.5" stroke-linecap="round"/></svg>

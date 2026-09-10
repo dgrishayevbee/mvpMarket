@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"><defs><filter id="bundle_office_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="bundle_office_dark" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#454B55"/><stop offset="1" stop-color="#1E2228"/></linearGradient><linearGradient id="bundle_office_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient><linearGradient id="bundle_office_green" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#6FD97F"/><stop offset="1" stop-color="#2BA84F"/></linearGradient><linearGradient id="bundle_office_o" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFA05A"/><stop offset="1" stop-color="#F4632B"/></linearGradient></defs>
+<g filter="url(#bundle_office_sh)">
+  <rect x="15" y="9" width="50" height="62" rx="10" fill="url(#bundle_office_dark)"/>
+</g>
+<g fill="#333A44">
+  <rect x="21" y="16" width="38" height="14" rx="4.5"/>
+  <rect x="21" y="34" width="38" height="14" rx="4.5"/>
+  <rect x="21" y="52" width="38" height="14" rx="4.5"/>
+</g>
+<g>
+  <circle cx="28" cy="23" r="3" fill="url(#bundle_office_y)"/>
+  <circle cx="37" cy="23" r="3" fill="url(#bundle_office_green)"/>
+  <rect x="44" y="21" width="11" height="4" rx="2" fill="#59626E"/>
+  <circle cx="28" cy="41" r="3" fill="url(#bundle_office_green)"/>
+  <circle cx="37" cy="41" r="3" fill="url(#bundle_office_y)"/>
+  <rect x="44" y="39" width="11" height="4" rx="2" fill="#59626E"/>
+  <circle cx="28" cy="59" r="3" fill="url(#bundle_office_o)"/>
+  <circle cx="37" cy="59" r="3" fill="url(#bundle_office_green)"/>
+  <rect x="44" y="57" width="11" height="4" rx="2" fill="#59626E"/>
+</g></svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none"><defs><filter id="sol_1c_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="sol_1c_purple" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#A88BF5"/><stop offset="1" stop-color="#6247D6"/></linearGradient><linearGradient id="sol_1c_y" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#FFDE59"/><stop offset="1" stop-color="#F5A623"/></linearGradient><linearGradient id="sol_1c_cloudl" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#F4F2FF"/><stop offset="1" stop-color="#DAD4F6"/></linearGradient></defs>
+<g filter="url(#sol_1c_sh)">
+  <rect x="13" y="11" width="41" height="54" rx="9" fill="url(#sol_1c_purple)"/>
+</g>
+<rect x="19" y="17" width="29" height="13" rx="4" fill="#FFFFFF" opacity="0.95"/>
+<rect x="22" y="21" width="14" height="4" rx="2" fill="#7A62E0"/>
+<g fill="#FFFFFF" opacity="0.9">
+  <rect x="19" y="36" width="9" height="8" rx="2.5"/>
+  <rect x="30" y="36" width="9" height="8" rx="2.5"/>
+  <rect x="19" y="48" width="9" height="8" rx="2.5"/>
+  <rect x="30" y="48" width="9" height="8" rx="2.5"/>
+</g>
+<rect x="41" y="36" width="9" height="20" rx="3" fill="url(#sol_1c_y)"/>
+<g filter="url(#sol_1c_sh)" fill="url(#sol_1c_cloudl)">
+  <circle cx="52" cy="52" r="10"/>
+  <circle cx="64" cy="51" r="8"/>
+  <circle cx="58" cy="58" r="9"/>
+  <rect x="44" y="55" width="28" height="12" rx="6"/>
+</g>
+<path d="M50 61 h16" stroke="#8E7FE8" stroke-width="2.6" stroke-linecap="round" opacity="0.55"/></svg>

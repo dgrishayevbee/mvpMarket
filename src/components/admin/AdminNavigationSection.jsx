@@ -10,6 +10,7 @@ function CategoryRow({ item, onUpdate, onRemove }) {
         value={item.icon}
         onChange={(e) => onUpdate({ icon: e.target.value })}
         aria-label="Иконка"
+        placeholder="nav-…"
       />
       <Input value={item.label} onChange={(e) => onUpdate({ label: e.target.value })} />
       <button type="button" className="admin-row__remove" onClick={onRemove} aria-label="Удалить">
@@ -53,7 +54,7 @@ export function AdminNavigationSection() {
         <Button
           variant="secondary"
           size="sm"
-          onClick={() => addCategory({ label: "Новая категория", icon: "🏷️" })}
+          onClick={() => addCategory({ label: "Новая категория", icon: "nav-popular" })}
         >
           + Добавить категорию
         </Button>
@@ -106,7 +107,7 @@ export function AdminNavigationSection() {
             </div>
           ))}
         </div>
-        <Button variant="secondary" size="sm" onClick={() => addQuickLink({ label: "Новая ссылка", icon: "🔗" })}>
+        <Button variant="secondary" size="sm" onClick={() => addQuickLink({ label: "Новая ссылка", icon: "nav-packages" })}>
           + Добавить ссылку
         </Button>
       </div>
@@ -134,7 +135,7 @@ export function AdminNavigationSection() {
         <Button
           variant="secondary"
           size="sm"
-          onClick={() => addSupportLink({ label: "Новая ссылка", icon: "❓" })}
+          onClick={() => addSupportLink({ label: "Новая ссылка", icon: "nav-support" })}
         >
           + Добавить ссылку
         </Button>

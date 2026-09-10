@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><filter id="f_users_sh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.6" stdDeviation="2" flood-color="#0B1220" flood-opacity="0.20"/></filter><linearGradient id="f_users_teall" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#9BE6DE"/><stop offset="1" stop-color="#4FC2B8"/></linearGradient><linearGradient id="f_users_teal" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#5FD3C8"/><stop offset="1" stop-color="#1E9E96"/></linearGradient></defs>
+<g fill="url(#f_users_teall)">
+  <circle cx="32" cy="17" r="6.5"/>
+  <path d="M20 40 a12 12 0 0 1 24 0 z"/>
+</g>
+<g filter="url(#f_users_sh)" fill="url(#f_users_teal)">
+  <circle cx="19" cy="18.5" r="8"/>
+  <path d="M5 41 a14 14 0 0 1 28 0 z"/>
+</g></svg>

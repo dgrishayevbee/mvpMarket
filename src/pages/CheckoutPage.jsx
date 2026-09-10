@@ -5,7 +5,7 @@ import { useOrders } from "../context/OrdersContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useContent } from "../context/ContentContext.jsx";
 import { Badge, Button, Tabs } from "../components/ui/index.js";
-import { FeatureIcon } from "../components/catalog/featureIcons.jsx";
+import FeatureIcon from "../components/common/FeatureIcon.jsx";
 import "./CheckoutPage.css";
 
 function formatPrice(value) {
@@ -127,7 +127,7 @@ function OrderItemCard({ item, onQty }) {
           <ul className="checkout-item__features">
             {features.map((f) => (
               <li key={f}>
-                <FeatureIcon text={f} className="checkout-item__check" />
+                <FeatureIcon text={f} size={20} className="checkout-item__check" />
                 {f}
               </li>
             ))}
