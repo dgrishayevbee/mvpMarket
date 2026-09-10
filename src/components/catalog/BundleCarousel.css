@@ -78,10 +78,42 @@
   gap: var(--space-4);
 }
 
+.bundle-card__prices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
 .bundle-card__from-label {
   display: block;
   font-size: 11px;
   color: var(--color-text-tertiary);
+}
+
+/* Цена и подпись к ней в одной строке: подпись переносится под цену,
+   если карточка узкая. */
+.bundle-card__price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.bundle-card__old {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  text-decoration: line-through;
+}
+
+.bundle-card__price-note {
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--color-text-tertiary);
+}
+
+.bundle-card__price-note--gain {
+  color: var(--color-success-text);
+  font-weight: 600;
 }
 
 .bundle-card__from {

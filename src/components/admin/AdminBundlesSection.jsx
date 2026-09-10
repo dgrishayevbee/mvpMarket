@@ -31,6 +31,14 @@ export function AdminBundlesSection() {
                 onChange={(e) => updateBundle(b.id, { price: Number(e.target.value) })}
               />
             </label>
+            <label className="admin-field">
+              <span>Цена при покупке отдельно, ₸ (0 — не показывать)</span>
+              <Input
+                type="number"
+                value={b.oldPrice || 0}
+                onChange={(e) => updateBundle(b.id, { oldPrice: Number(e.target.value) })}
+              />
+            </label>
             <div className="admin-field">
               <span>Технологии в пакете</span>
               <StringListEditor items={b.features} onChange={(features) => updateBundle(b.id, { features })} />
@@ -43,7 +51,7 @@ export function AdminBundlesSection() {
       ))}
       <Button
         onClick={() =>
-          addBundle({ title: "Новый пакет", subtitle: "", price: 0, seller: "mvpMarket", features: [] })
+          addBundle({ title: "Новый пакет", subtitle: "", price: 0, oldPrice: 0, seller: "mvpMarket", features: [] })
         }
       >
         + Добавить пакет

@@ -36,9 +36,20 @@ export function BundleCarousel() {
               ))}
             </ul>
             <div className="bundle-card__footer">
-              <div>
+              <div className="bundle-card__prices">
                 <span className="bundle-card__from-label">Оплата в месяц</span>
-                <span className="bundle-card__from">от {formatPrice(b.price)}</span>
+                {b.oldPrice > b.price && (
+                  <div className="bundle-card__price-row">
+                    <span className="bundle-card__old">{formatPrice(b.oldPrice)}</span>
+                    <span className="bundle-card__price-note">при покупке отдельно</span>
+                  </div>
+                )}
+                <div className="bundle-card__price-row">
+                  <span className="bundle-card__from">от {formatPrice(b.price)}</span>
+                  <span className="bundle-card__price-note bundle-card__price-note--gain">
+                    выгодно при покупке пакетом
+                  </span>
+                </div>
               </div>
               <Button size="sm" onClick={() => addItem(b)}>
                 Добавить в корзину
