@@ -3,7 +3,7 @@
   align-items: center;
   height: 26px;
   padding: 0 12px;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-tile);
   font-size: 12px;
   font-weight: 600;
 }
@@ -11,7 +11,6 @@
 .badge--solid {
   background: var(--color-brand-yellow);
   color: var(--color-ink);
-  font-weight: 700;
 }
 
 .badge--tint {

@@ -1,15 +1,15 @@
 .segmented {
   display: inline-flex;
   padding: 4px;
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-control);
+  border-radius: var(--radius-input);
+  background: var(--color-surface-muted);
 }
 
 .segmented__item {
   height: 32px;
   padding: 0 16px;
   border: 0;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-tile);
   background: transparent;
   color: var(--color-text-secondary);
   font-size: 13px;

@@ -2,11 +2,7 @@
   width: 100%;
   height: 100%;
   min-height: 80px;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--color-surface-muted-hover) 0 10px,
-    var(--color-surface-muted) 10px 20px
-  );
+  background: repeating-linear-gradient(135deg, #e6e6e2 0 10px, #efefeb 10px 20px);
   display: flex;
   align-items: flex-end;
   padding: 8px;
@@ -19,7 +15,7 @@
 .placeholder-image__label {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: var(--color-text-secondary);
+  color: #8a8a85;
   background: var(--color-surface);
   padding: 3px 6px;
   border-radius: 5px;

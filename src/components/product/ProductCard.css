@@ -96,5 +96,5 @@
 }
 
 .product-card__add:hover {
-  background: var(--color-ink-press);
+  background: #000;
 }
