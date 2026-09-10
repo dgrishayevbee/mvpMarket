@@ -1,4 +1,8 @@
+/* Card is its own container, so the type below scales with the card rather than
+   with the viewport — the same card reads correctly in two, three or four
+   columns. */
 .solution-card {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -110,4 +114,45 @@
 .solution-card__actions {
   display: flex;
   gap: 8px;
+}
+
+/* Thresholds are content-box widths, so they sit ~44px below the card width.
+   Padding stays out of these blocks: changing it would move the very width
+   being queried. */
+@container (max-width: 300px) {
+  .solution-card__title {
+    font-size: 15px;
+  }
+
+  .solution-card__subtitle,
+  .solution-card__features li {
+    font-size: 12px;
+  }
+
+  .solution-card__price {
+    font-size: 18px;
+  }
+
+  .solution-card__footer {
+    padding-top: 8px;
+  }
+}
+
+@container (min-width: 420px) {
+  .solution-card {
+    gap: 14px;
+  }
+
+  .solution-card__title {
+    font-size: 19px;
+  }
+
+  .solution-card__subtitle,
+  .solution-card__features li {
+    font-size: 14px;
+  }
+
+  .solution-card__price {
+    font-size: 22px;
+  }
 }
