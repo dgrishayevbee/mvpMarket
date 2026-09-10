@@ -23,15 +23,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 16px;
-  border-radius: var(--radius-card);
+  padding: 14px 16px 14px 22px;
+  border-radius: var(--radius-pill);
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--color-border);
 }
 
 .hero-search__icon {
-  color: #ff9a3d;
+  color: var(--color-accent-orange);
   font-size: 15px;
 }
 
@@ -49,7 +48,8 @@
   height: 32px;
   border-radius: var(--radius-pill);
   border: 0;
-  background: var(--color-brand-yellow);
+  background: var(--gradient-accent);
+  color: var(--color-text-on-dark);
   font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
@@ -76,15 +76,15 @@
   height: 32px;
   padding: 0 14px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--color-border-strong);
+  border: 0;
   background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
   font-size: 12px;
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: var(--color-ink);
   cursor: pointer;
 }
 
 .hero-search__prompt:hover {
-  border-color: var(--color-ink);
-  color: var(--color-ink);
+  background: var(--color-surface-control);
 }

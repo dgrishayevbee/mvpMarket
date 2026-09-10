@@ -10,7 +10,7 @@
   height: 28px;
   border: 0;
   border-radius: var(--radius-pill);
-  background: #ddddda;
+  background: var(--color-border-strong);
   position: relative;
   cursor: pointer;
   padding: 0;

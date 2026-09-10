@@ -51,9 +51,10 @@
 .tech-carousel__icon {
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-muted);
-  color: var(--color-text-secondary);
+  border-radius: var(--radius-tile);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-icon);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +69,8 @@
   gap: var(--space-2);
   padding: var(--space-3);
   border-radius: var(--radius-tile);
-  background: var(--color-surface-muted);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
 .tech-carousel--static .tech-carousel__icon {
@@ -78,6 +80,7 @@
   aspect-ratio: 1;
   border-radius: var(--radius-tile);
   background: transparent;
+  box-shadow: none;
 }
 
 .tech-carousel__label {

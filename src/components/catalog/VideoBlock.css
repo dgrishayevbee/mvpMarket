@@ -3,7 +3,7 @@
   min-height: 220px;
   border-radius: var(--radius-card);
   overflow: hidden;
-  background: linear-gradient(120deg, #4b5148 0%, #6b7264 100%);
+  background: var(--gradient-media);
   background-size: cover;
   background-position: center;
   display: flex;

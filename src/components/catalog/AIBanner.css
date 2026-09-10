@@ -56,8 +56,8 @@
   padding: 9px 16px 9px 9px;
   border: 0;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.22);
-  color: var(--color-text-on-dark);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -65,14 +65,14 @@
 }
 
 .ai-banner__suggestion:hover {
-  background: rgba(255, 255, 255, 0.32);
+  background: var(--color-surface);
 }
 
 .ai-banner__suggestion-avatar {
   width: 26px;
   height: 26px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--color-surface-control);
   display: flex;
   align-items: center;
   justify-content: center;

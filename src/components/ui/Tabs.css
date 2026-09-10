@@ -7,9 +7,10 @@
 .tabs__item {
   height: 38px;
   padding: 0 18px;
-  border: 1px solid var(--color-border-strong);
+  border: 0;
   border-radius: var(--radius-pill);
   background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
   color: var(--color-ink);
   font-size: 13px;
   font-weight: 600;
@@ -17,6 +18,7 @@
 }
 
 .tabs__item--active {
-  background: var(--color-brand-yellow);
-  border-color: var(--color-brand-yellow);
+  background: var(--color-ink);
+  color: var(--color-text-on-dark);
+  box-shadow: none;
 }

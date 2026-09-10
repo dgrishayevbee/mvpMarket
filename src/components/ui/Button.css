@@ -4,7 +4,7 @@
   justify-content: center;
   gap: var(--space-2);
   border: 0;
-  border-radius: var(--radius-input);
+  border-radius: var(--radius-pill);
   font-weight: 600;
   cursor: pointer;
   transition: background var(--duration-fast) var(--ease-standard),
@@ -23,7 +23,6 @@
   height: 36px;
   padding: 0 16px;
   font-size: 13px;
-  border-radius: var(--radius-pill);
 }
 
 .btn--primary {
@@ -31,16 +30,15 @@
   color: var(--color-text-on-dark);
 }
 .btn--primary:hover {
-  background: #000000;
+  background: var(--color-ink-press);
 }
 
 .btn--secondary {
-  background: var(--color-surface);
+  background: var(--color-surface-control);
   color: var(--color-ink);
-  border: 1px solid var(--color-border-strong);
 }
 .btn--secondary:hover {
-  border-color: var(--color-ink);
+  background: var(--color-surface-muted-hover);
 }
 
 .btn--accent {
@@ -54,16 +52,14 @@
 .btn--ghost {
   background: var(--color-surface-muted);
   color: var(--color-ink);
-  border-radius: var(--radius-pill);
 }
 .btn--ghost:hover {
   background: var(--color-surface-muted-hover);
 }
 
 .btn--gradient {
-  background: var(--gradient-promo);
+  background: var(--gradient-accent);
   color: var(--color-text-on-dark);
-  border-radius: var(--radius-pill);
 }
 
 .btn:disabled {

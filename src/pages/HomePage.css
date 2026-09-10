@@ -13,10 +13,10 @@
 }
 
 /* Header is rendered by Layout, outside this page, and paints an opaque
-   surface. The same horizontal gradient across the same width keeps it seamless
-   with the backdrop while staying opaque once the page is scrolled. */
+   surface. Painting the same gradient sized to the same box means the header
+   shows exactly the top slice of the backdrop, so there is no seam under it. */
 .layout:has(.home-page) .header {
-  background: var(--gradient-hero);
+  background: var(--gradient-hero) no-repeat 0 0 / 100% var(--size-hero-backdrop);
   border-bottom-color: transparent;
 }
 
