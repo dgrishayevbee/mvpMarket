@@ -31,15 +31,6 @@ export function Header() {
           <NavLink to="/" end className="header__nav-link">
             Каталог
           </NavLink>
-          {sellerMode ? (
-            <NavLink to="/seller" className="header__nav-link">
-              Кабинет продавца
-            </NavLink>
-          ) : (
-            <NavLink to="/profile" className="header__nav-link">
-              Мои заказы
-            </NavLink>
-          )}
         </nav>
 
         <form className="header__search" onSubmit={onSearch}>
@@ -53,6 +44,15 @@ export function Header() {
         </form>
 
         <div className="header__actions">
+          {sellerMode ? (
+            <NavLink to="/seller" className="header__nav-link">
+              Кабинет продавца
+            </NavLink>
+          ) : (
+            <NavLink to="/profile" className="header__nav-link">
+              Мои заказы
+            </NavLink>
+          )}
           <Link to="/profile#favorites" className="header__icon-btn" aria-label="Избранное">
             ♡
             {favIds.length > 0 && <span className="header__badge">{favIds.length}</span>}

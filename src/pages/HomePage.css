@@ -1,3 +1,10 @@
+/* Right edge of the white left rail: the middle of the gap between the sidebar
+   column and the main column. Lives on the layout because the header is a
+   sibling of this page, not a descendant, and has to read it too. */
+.layout:has(.home-page) {
+  --rail-edge: max(276px, 50% - 284px);
+}
+
 /* Full-bleed wash behind the header, hero and bundle sections. Absolute with no
    positioned ancestor, so it resolves against the initial containing block and
    spans the viewport from the top of the document. */
@@ -9,14 +16,16 @@
   height: var(--size-hero-backdrop);
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 0 88%, var(--color-bg) 100%), var(--gradient-hero);
+  background: linear-gradient(to right, var(--color-surface) 0 var(--rail-edge), transparent var(--rail-edge)),
+    linear-gradient(180deg, transparent 0 88%, var(--color-bg) 100%), var(--gradient-hero);
 }
 
 /* Header is rendered by Layout, outside this page, and paints an opaque
-   surface. The same horizontal gradient across the same width keeps it seamless
-   with the backdrop while staying opaque once the page is scrolled. */
+   surface. The same horizontal gradient and rail across the same width keep it
+   seamless with the backdrop while staying opaque once the page is scrolled. */
 .layout:has(.home-page) .header {
-  background: var(--gradient-hero);
+  background: linear-gradient(to right, var(--color-surface) 0 var(--rail-edge), transparent var(--rail-edge)),
+    var(--gradient-hero);
   border-bottom-color: transparent;
 }
 
@@ -75,6 +84,11 @@
 }
 
 @media (max-width: 900px) {
+  /* Sidebar is hidden here, so there is no rail to keep white. */
+  .layout:has(.home-page) {
+    --rail-edge: 0px;
+  }
+
   .home-page__layout {
     grid-template-columns: 1fr;
   }

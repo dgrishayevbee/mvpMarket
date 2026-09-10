@@ -81,6 +81,11 @@
   flex-shrink: 0;
 }
 
+.header__actions .header__nav-link {
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
 .header__icon-btn {
   position: relative;
   width: 40px;
