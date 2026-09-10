@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import { useOrders } from "../context/OrdersContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
+import { useContent } from "../context/ContentContext.jsx";
 import { Badge, Button, PlaceholderImage, Tabs } from "../components/ui/index.js";
 import { FeatureIcon } from "../components/catalog/featureIcons.jsx";
 import "./CheckoutPage.css";
@@ -66,6 +67,46 @@ const PAYMENT_OPTIONS = [
   },
 ];
 
+// Корзина хранит витринные поля товара, но заказы, положенные в неё до этого,
+// их не знают — поэтому карточку добираем из контента по id (а интерактивный
+// тариф собираем из его id, он в каталоге не лежит).
+function describeTariff(id) {
+  const match = /^tariff-(\d+)-(limit|unlimited)-(\d+)$/.exec(id || "");
+  if (!match) return null;
+  const [, speed, mode, gb] = match;
+  return {
+    subtitle: "Интернет для бизнеса",
+    icon: "🌐",
+    features: [
+      `Скорость ${speed} Мбит/с`,
+      mode === "unlimited" ? "Безлимитный трафик" : `${gb} ГБ трафика в месяц`,
+      "Подключение без визита в офис",
+    ],
+  };
+}
+
+function findInContent(content, id) {
+  return (
+    content.solutions?.find((s) => s.id === id) ||
+    content.bundles?.find((b) => b.id === id) ||
+    content.businessChoice?.simpleTariffs?.find((t) => t.id === id) ||
+    describeTariff(id) ||
+    null
+  );
+}
+
+function withCardData(item, content) {
+  const source = findInContent(content, item.id) || {};
+  return {
+    ...item,
+    subtitle: item.subtitle || source.subtitle || "",
+    icon: item.icon || source.icon || "",
+    imageUrl: item.imageUrl || source.imageUrl || "",
+    features: item.features?.length ? item.features : source.features || [],
+    tags: item.tags?.length ? item.tags : source.tags || [],
+  };
+}
+
 function OrderItemCard({ item, onQty }) {
   const features = item.features?.length ? item.features : [];
 
@@ -128,6 +169,7 @@ export function CheckoutPage() {
   const { items, subtotal, setQty, clear } = useCart();
   const { createOrder } = useOrders();
   const { user } = useAuth();
+  const { content } = useContent();
   const navigate = useNavigate();
 
   const [step, setStep] = useState("order");
@@ -169,7 +211,7 @@ export function CheckoutPage() {
             <span className="checkout-page__label">Состав заказа</span>
             <div className="checkout-page__items">
               {items.map((item) => (
-                <OrderItemCard key={item.id} item={item} onQty={setQty} />
+                <OrderItemCard key={item.id} item={withCardData(item, content)} onQty={setQty} />
               ))}
             </div>
 
