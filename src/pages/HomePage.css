@@ -1,8 +1,29 @@
+/* Home page runs edge to edge instead of sitting in the centred 1120 column:
+   the sidebar becomes a fixed left rail and the main column is centred in what
+   is left, capped so text does not over-stretch on a wide monitor. Scoped to
+   this page so the rest of the site keeps the centred layout. */
+.layout:has(.home-page) .layout__main,
+.layout:has(.home-page) .header__inner {
+  max-width: none;
+  padding-left: var(--space-6);
+}
+
+.layout:has(.home-page) .header__search {
+  max-width: 720px;
+}
+
+/* Definite width rather than max-width: auto margins turn a grid item into a
+   shrink-to-fit box, which would size it to its content and overflow the track. */
+.home-page__main {
+  width: min(100%, 1400px);
+  margin: 0 auto;
+}
+
 /* Right edge of the white left rail: the middle of the gap between the sidebar
    column and the main column. Lives on the layout because the header is a
    sibling of this page, not a descendant, and has to read it too. */
 .layout:has(.home-page) {
-  --rail-edge: max(276px, 50% - 284px);
+  --rail-edge: 260px;
 }
 
 /* Full-bleed wash behind the header, hero and bundle sections. Absolute with no
@@ -31,7 +52,7 @@
 
 .home-page__layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 32px;
   align-items: start;
 }
