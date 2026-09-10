@@ -85,6 +85,7 @@ export function HomePage() {
 
   return (
     <div className="home-page">
+      <div className="home-page__backdrop" aria-hidden="true" />
       <div className="home-page__layout">
         <aside className="home-page__sidebar">
           <CatalogSidebar activeCategory={category} onCategoryChange={onCategoryChange} onQuickLink={onQuickLink} />

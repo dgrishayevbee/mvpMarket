@@ -1,24 +1,11 @@
 .hero-search {
   position: relative;
-  overflow: hidden;
-  background: var(--color-surface);
-  border-radius: var(--radius-card);
-  border: 1px solid var(--color-border);
   padding: 40px 40px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
   text-align: center;
-}
-
-.hero-search::before {
-  content: "";
-  position: absolute;
-  inset: -40% -10% auto 30%;
-  height: 320px;
-  background: var(--gradient-hero-glow);
-  pointer-events: none;
 }
 
 .hero-search__title {

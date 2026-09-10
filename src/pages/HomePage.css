@@ -1,3 +1,25 @@
+/* Full-bleed wash behind the header, hero and bundle sections. Absolute with no
+   positioned ancestor, so it resolves against the initial containing block and
+   spans the viewport from the top of the document. */
+.home-page__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--size-hero-backdrop);
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 0 88%, var(--color-bg) 100%), var(--gradient-hero);
+}
+
+/* Header is rendered by Layout, outside this page, and paints an opaque
+   surface. The same horizontal gradient across the same width keeps it seamless
+   with the backdrop while staying opaque once the page is scrolled. */
+.layout:has(.home-page) .header {
+  background: var(--gradient-hero);
+  border-bottom-color: transparent;
+}
+
 .home-page__layout {
   display: grid;
   grid-template-columns: 220px 1fr;
