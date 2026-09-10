@@ -95,12 +95,13 @@
   color: var(--color-text-secondary);
 }
 
-/* Column count follows the available width instead of being pinned at two, so
-   cards keep a readable width rather than stretching on a wide screen. */
+/* Two columns capped at a width that keeps each card near 390px, so the cards
+   stay compact instead of widening with the page. */
 .home-page__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+  max-width: 800px;
 }
 
 .home-page__empty {
