@@ -4,7 +4,7 @@ import { useCart } from "../context/CartContext.jsx";
 import { useOrders } from "../context/OrdersContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useContent } from "../context/ContentContext.jsx";
-import { Badge, Button, PlaceholderImage, Tabs } from "../components/ui/index.js";
+import { Badge, Button, Tabs } from "../components/ui/index.js";
 import { FeatureIcon } from "../components/catalog/featureIcons.jsx";
 import "./CheckoutPage.css";
 
@@ -76,7 +76,6 @@ function describeTariff(id) {
   const [, speed, mode, gb] = match;
   return {
     subtitle: "Интернет для бизнеса",
-    icon: "🌐",
     features: [
       `Скорость ${speed} Мбит/с`,
       mode === "unlimited" ? "Безлимитный трафик" : `${gb} ГБ трафика в месяц`,
@@ -100,8 +99,6 @@ function withCardData(item, content) {
   return {
     ...item,
     subtitle: item.subtitle || source.subtitle || "",
-    icon: item.icon || source.icon || "",
-    imageUrl: item.imageUrl || source.imageUrl || "",
     features: item.features?.length ? item.features : source.features || [],
     tags: item.tags?.length ? item.tags : source.tags || [],
   };
@@ -112,16 +109,6 @@ function OrderItemCard({ item, onQty }) {
 
   return (
     <article className="checkout-item">
-      <div className="checkout-item__media">
-        {item.imageUrl ? (
-          <img src={item.imageUrl} alt="" className="checkout-item__image" />
-        ) : item.icon ? (
-          <span className="checkout-item__icon">{item.icon}</span>
-        ) : (
-          <PlaceholderImage label={item.title} height="88px" />
-        )}
-      </div>
-
       <div className="checkout-item__body">
         {item.tags?.length > 0 && (
           <div className="checkout-item__tags">
