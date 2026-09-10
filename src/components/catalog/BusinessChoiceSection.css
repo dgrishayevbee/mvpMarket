@@ -4,11 +4,13 @@
   margin-bottom: 20px;
 }
 
+/* Без align-items: start - карточки растягиваются на высоту ряда, которую
+   задаёт левый интерактивный тариф, поэтому все четыре одного размера.
+   Прижатый margin-top: auto футер простых карточек уходит к нижнему краю. */
 .business-choice__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-  align-items: start;
 }
 
 .tariff-card {
