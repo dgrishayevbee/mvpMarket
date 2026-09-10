@@ -8,19 +8,48 @@ function makeId(prefix) {
   return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-// Merge saved content over defaults key-by-key so an old/partial export
-// (or a hand-edited JSON missing a section) never breaks the page.
-function mergeWithDefaults(saved) {
-  if (!saved || typeof saved !== "object") return defaultContent;
-  const merged = { ...defaultContent };
-  for (const key of Object.keys(defaultContent)) {
-    if (saved[key] !== undefined) merged[key] = saved[key];
+function isPlainObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+// Сохранённый контент кладётся поверх дефолтов, а не вместо них: поля,
+// добавленные в siteContent.js уже после того, как у пользователя завёлся
+// localStorage (например oldPrice у пакета), иначе никогда бы до него не
+// доехали. Элементы списков сопоставляются по id — состав и порядок берём
+// из сохранённого (удаление в /admin должно работать), недостающие поля
+// подмешиваем из дефолтного элемента с тем же id.
+function mergeDeep(defaults, saved) {
+  if (saved === undefined) return defaults;
+
+  if (Array.isArray(defaults)) {
+    if (!Array.isArray(saved)) return saved;
+    return saved.map((item) => {
+      if (!isPlainObject(item) || item.id === undefined) return item;
+      const base = defaults.find((d) => isPlainObject(d) && d.id === item.id);
+      return base ? mergeDeep(base, item) : item;
+    });
   }
-  return merged;
+
+  if (isPlainObject(defaults)) {
+    if (!isPlainObject(saved)) return saved;
+    const merged = { ...defaults };
+    for (const key of Object.keys(saved)) {
+      merged[key] = mergeDeep(defaults[key], saved[key]);
+    }
+    return merged;
+  }
+
+  return saved;
+}
+
+function mergeWithDefaults(saved) {
+  if (!isPlainObject(saved)) return defaultContent;
+  return mergeDeep(defaultContent, saved);
 }
 
 export function ContentProvider({ children }) {
-  const [content, setContent] = useLocalStorage("mvpmarket:content", defaultContent);
+  const [stored, setContent] = useLocalStorage("mvpmarket:content", defaultContent);
+  const content = useMemo(() => mergeWithDefaults(stored), [stored]);
 
   const value = useMemo(() => {
     const updateSection = (key, patch) =>
