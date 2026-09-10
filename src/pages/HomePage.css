@@ -103,8 +103,11 @@
 .home-page__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  width: min(100%, 800px);
+  row-gap: 16px;
+  column-gap: var(--space-12);
+  /* 2 x 392px карточки + column-gap: ширина растёт ровно на добавленный
+     промежуток, поэтому воздух по бокам уменьшается, а карточки не меняются. */
+  width: min(100%, 832px);
   margin-inline: auto;
 }
 
