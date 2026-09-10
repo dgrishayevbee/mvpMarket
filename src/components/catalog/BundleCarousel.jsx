@@ -25,7 +25,7 @@ export function BundleCarousel() {
               <span className="bundle-card__subtitle">{b.subtitle}</span>
             </div>
 
-            <TechIconCarousel items={b.features} />
+            <TechIconCarousel items={b.features} static />
 
             <ul className="bundle-card__features">
               {b.features.map((f) => (

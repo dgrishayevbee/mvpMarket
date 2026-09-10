@@ -4,18 +4,21 @@ import "./TechIconCarousel.css";
 
 const PAGE_SIZE = 3;
 
-export function TechIconCarousel({ items }) {
+export function TechIconCarousel({ items, static: isStatic = false }) {
   const pageCount = Math.ceil(items.length / PAGE_SIZE);
   const [page, setPage] = useState(0);
 
   if (items.length === 0) return null;
 
-  const visible = items.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+  const visible = isStatic
+    ? items.slice(0, PAGE_SIZE)
+    : items.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
+  const showNav = !isStatic && pageCount > 1;
 
   return (
     <div className="tech-carousel">
       <div className="tech-carousel__row">
-        {pageCount > 1 && (
+        {showNav && (
           <button
             type="button"
             className="tech-carousel__arrow"
@@ -33,7 +36,7 @@ export function TechIconCarousel({ items }) {
             </div>
           ))}
         </div>
-        {pageCount > 1 && (
+        {showNav && (
           <button
             type="button"
             className="tech-carousel__arrow"
@@ -44,7 +47,7 @@ export function TechIconCarousel({ items }) {
           </button>
         )}
       </div>
-      {pageCount > 1 && (
+      {showNav && (
         <div className="tech-carousel__dots">
           {Array.from({ length: pageCount }).map((_, i) => (
             <button
