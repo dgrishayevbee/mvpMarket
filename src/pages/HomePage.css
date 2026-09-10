@@ -96,12 +96,15 @@
 }
 
 /* Two columns capped at a width that keeps each card near 390px, so the cards
-   stay compact instead of widening with the page. */
+   stay compact instead of widening with the page. Auto inline margins centre
+   the capped block inside the main column instead of leaving all the slack on
+   the right, so it sits on the same axis as the hero and the other sections. */
 .home-page__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   max-width: 800px;
+  margin-inline: auto;
 }
 
 .home-page__empty {
