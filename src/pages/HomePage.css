@@ -96,14 +96,15 @@
 }
 
 /* Two columns capped at a width that keeps each card near 390px, so the cards
-   stay compact instead of widening with the page. Auto inline margins centre
-   the capped block inside the main column instead of leaving all the slack on
-   the right, so it sits on the same axis as the hero and the other sections. */
+   stay compact instead of widening with the page, centred in the main column so
+   the slack is split evenly instead of all landing on the right. Definite width
+   rather than max-width: this is a flex item, and auto inline margins on one
+   turn it into a shrink-to-fit box that collapses to the content width. */
 .home-page__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  max-width: 800px;
+  width: min(100%, 800px);
   margin-inline: auto;
 }
 
