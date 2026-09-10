@@ -78,7 +78,7 @@ function SimpleTariffCard({ tariff }) {
         {tariff.imageUrl ? (
           <img src={tariff.imageUrl} alt={tariff.title} className="tariff-card__image" />
         ) : (
-          <PlaceholderImage label={tariff.icon} height="72px" />
+          <PlaceholderImage label={tariff.icon} />
         )}
       </div>
       <div className="tariff-card__info">

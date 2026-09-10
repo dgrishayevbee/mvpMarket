@@ -61,10 +61,14 @@
   border: 1px solid var(--color-border);
 }
 
+/* Картинка забирает всю свободную высоту карточки вместо фиксированных 72px:
+   ряд выровнен по левому интерактивному тарифу, поэтому пустое место под
+   текстом уходит в фото, а текст опускается соразмерно ему. */
 .tariff-card__media {
   border-radius: var(--radius-tile);
   overflow: hidden;
-  height: 72px;
+  flex: 1;
+  min-height: 120px;
 }
 
 .tariff-card__image {
@@ -88,6 +92,9 @@
   font-size: 12px;
   color: var(--color-text-secondary);
   line-height: 1.4;
+  /* Резерв под две строки: иначе карточка с однострочным описанием отдаёт
+     лишнюю строку картинке, и фото в ряду получаются разной высоты. */
+  min-height: calc(2 * 1.4em);
 }
 
 .tariff-card__footer {
