@@ -2,14 +2,15 @@
    the sidebar becomes a fixed left rail and the main column is centred in what
    is left, capped so text does not over-stretch on a wide monitor. Scoped to
    this page so the rest of the site keeps the centred layout. */
-.layout:has(.home-page) .layout__main,
-.layout:has(.home-page) .header__inner {
+.layout:has(.home-page) .layout__main {
   max-width: none;
   padding-left: var(--space-6);
 }
 
-.layout:has(.home-page) .header__search {
-  max-width: 720px;
+/* Symmetric padding keeps the centred search exactly on the page centre. */
+.layout:has(.home-page) .header__inner {
+  max-width: none;
+  padding-inline: var(--space-6);
 }
 
 /* Definite width rather than max-width: auto margins turn a grid item into a
@@ -96,7 +97,7 @@
 
 .home-page__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 

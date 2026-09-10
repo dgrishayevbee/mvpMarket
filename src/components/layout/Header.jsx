@@ -22,16 +22,18 @@ export function Header() {
   return (
     <header className="header">
       <div className="header__inner">
-        <Link to="/" className="header__logo">
-          <span className="header__logo-dot" />
-          mvpMarket
-        </Link>
+        <div className="header__brand">
+          <Link to="/" className="header__logo">
+            <span className="header__logo-dot" />
+            mvpMarket
+          </Link>
 
-        <nav className="header__nav">
-          <NavLink to="/" end className="header__nav-link">
-            Каталог
-          </NavLink>
-        </nav>
+          <nav className="header__nav">
+            <NavLink to="/" end className="header__nav-link">
+              Каталог
+            </NavLink>
+          </nav>
+        </div>
 
         <form className="header__search" onSubmit={onSearch}>
           <span className="header__search-icon">⌕</span>
