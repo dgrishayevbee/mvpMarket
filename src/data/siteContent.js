@@ -212,8 +212,8 @@ export const defaultContent = {
   bundles: [
     {
       id: "bundle-small-office",
-      title: "Kense solo",
-      subtitle: "Всё для продуктивной работы небольшой команды",
+      title: "Для небольшой команды",
+      subtitle: "Интернет, Wi-Fi, Microsoft 365 и телефония в одном счёте",
       imageUrl: "/images/icons/solutions/bundle-solo.svg",
       price: 7900,
       oldPrice: 15000,
@@ -222,8 +222,8 @@ export const defaultContent = {
     },
     {
       id: "bundle-corporate",
-      title: "Business Office",
-      subtitle: "Полная ИТ-инфраструктура крупного бизнеса",
+      title: "Для офиса и филиалов",
+      subtitle: "Гигабитный интернет, корпоративная связь и облачные серверы",
       imageUrl: "/images/icons/solutions/bundle-office.svg",
       price: 11000,
       oldPrice: 19900,
@@ -232,8 +232,8 @@ export const defaultContent = {
     },
     {
       id: "bundle-cloud-storage",
-      title: "Business Trade",
-      subtitle: "Безопасное хранение данных для бизнеса",
+      title: "Для хранения и защиты данных",
+      subtitle: "Резервное копирование, шифрование и облачные бэкапы",
       imageUrl: "/images/icons/solutions/bundle-trade.svg",
       price: 14990,
       oldPrice: 24900,

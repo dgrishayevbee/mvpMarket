@@ -96,9 +96,9 @@ const NAV_RULES = [
 ];
 
 const BUNDLE_RULES = [
-  [/Kense\s+solo/i, 'bundle-solo'],
-  [/Business\s+Office/i, 'bundle-office'],
-  [/Business\s+Trade/i, 'bundle-trade'],
+  [/Kense\s+solo|неболь|команд|старт/i, 'bundle-solo'],
+  [/Business\s+Office|офис|филиал/i, 'bundle-office'],
+  [/Business\s+Trade|данн|хранен|бэкап/i, 'bundle-trade'],
 ];
 
 function matchId(text, rules) {
