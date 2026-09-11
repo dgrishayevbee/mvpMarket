@@ -1,8 +1,29 @@
 import { createContext, useContext, useMemo } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage.js";
-import { defaultContent } from "../data/siteContent.js";
+import { defaultContent, CONTENT_VERSION } from "../data/siteContent.js";
 
 const ContentContext = createContext(null);
+
+const CONTENT_KEY = "mvpmarket:content";
+const VERSION_KEY = "mvpmarket:content-version";
+
+// Контент живёт в localStorage, а значит у каждого посетителя своя копия.
+// Когда в siteContent.js выкатывается новый текст, старая копия его перекрыла
+// бы — и владелец правок видел бы одно, а все остальные другое. Поэтому при
+// смене CONTENT_VERSION сохранённая копия отбрасывается. Делается это до
+// первого рендера, чтобы страница сразу отрисовалась новым контентом.
+function dropOutdatedContent() {
+  try {
+    if (window.localStorage.getItem(VERSION_KEY) !== CONTENT_VERSION) {
+      window.localStorage.removeItem(CONTENT_KEY);
+      window.localStorage.setItem(VERSION_KEY, CONTENT_VERSION);
+    }
+  } catch {
+    // localStorage недоступен — работаем на дефолтах, это и нужно
+  }
+}
+
+dropOutdatedContent();
 
 function makeId(prefix) {
   return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
@@ -48,7 +69,7 @@ function mergeWithDefaults(saved) {
 }
 
 export function ContentProvider({ children }) {
-  const [stored, setContent] = useLocalStorage("mvpmarket:content", defaultContent);
+  const [stored, setContent] = useLocalStorage(CONTENT_KEY, defaultContent);
   const content = useMemo(() => mergeWithDefaults(stored), [stored]);
 
   const value = useMemo(() => {

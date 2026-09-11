@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { useContent } from "../context/ContentContext.jsx";
+import { CONTENT_VERSION } from "../data/siteContent.js";
 import { Button } from "../components/ui/index.js";
 import { AdminHeroSection } from "../components/admin/AdminHeroSection.jsx";
 import { AdminNavigationSection } from "../components/admin/AdminNavigationSection.jsx";
@@ -75,8 +76,9 @@ export function AdminPage() {
         <div>
           <h1 className="admin-page__title">Редактор контента главной</h1>
           <p className="admin-page__hint">
-            Правки сохраняются у вас в браузере и сразу видны на сайте. Когда всё устроит — нажмите
-            «Экспортировать» и пришлите файл, чтобы зафиксировать его для всех посетителей.
+            Правки сохраняются только в этом браузере — по ссылке другие увидят контент версии{" "}
+            {CONTENT_VERSION}, зашитый в сайт. Чтобы правки увидели все, нажмите «Экспортировать» и
+            пришлите файл: он попадёт в код, а сохранённая копия обновится у всех автоматически.
           </p>
         </div>
         <div className="admin-page__actions">
