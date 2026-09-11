@@ -37,3 +37,343 @@
   color: var(--color-ink);
   font-weight: 600;
 }
+
+/* --- B2B-регистрация по ЭЦП --- */
+
+.auth-page--wide {
+  padding-top: var(--space-6);
+}
+
+.auth-page__card--wide {
+  width: min(720px, 100%);
+  gap: var(--space-6);
+}
+
+.ecp-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.ecp-step__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.ecp-step__icon {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: var(--radius-tile);
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecp-step__title {
+  display: block;
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line);
+  font-weight: var(--text-h2-weight);
+}
+
+.ecp-step__note {
+  display: block;
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  color: var(--color-text-secondary);
+}
+
+.ecp-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ecp-option {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--radius-tile);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.ecp-option--active {
+  border-color: var(--color-ink);
+  background: var(--color-surface-muted);
+}
+
+.ecp-option__title {
+  font-size: var(--text-body-size);
+  font-weight: 600;
+}
+
+.ecp-option__note {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  color: var(--color-text-secondary);
+}
+
+.ecp-key {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ecp-key__file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-input);
+}
+
+.ecp-key__file-name {
+  font-size: var(--text-caption-size);
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.ecp-qr {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-tile);
+  background: var(--color-surface-muted);
+}
+
+.ecp-qr__code {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  border-radius: var(--radius-input);
+  background:
+    repeating-linear-gradient(90deg, var(--color-ink) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(0deg, var(--color-ink) 0 6px, var(--color-surface) 6px 12px);
+  opacity: 0.85;
+}
+
+.ecp-qr__note {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  color: var(--color-text-secondary);
+}
+
+.ecp-cert {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3) var(--space-6);
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-tile);
+  background: var(--color-surface-muted);
+}
+
+.ecp-cert > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ecp-cert dt {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.ecp-cert dd {
+  margin: 0;
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  overflow-wrap: anywhere;
+}
+
+.ecp-cert__ok {
+  color: var(--color-success-text);
+  font-weight: 600;
+}
+
+.ecp-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.ecp-field > span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.ecp-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.ecp-actions .btn {
+  flex: 1;
+}
+
+.ecp-biometry {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-4);
+  border-radius: var(--radius-tile);
+  background: var(--color-surface-muted);
+}
+
+.ecp-biometry__frame {
+  width: 180px;
+  height: 200px;
+  flex: none;
+  border-radius: 90px / 100px;
+  border: 2px dashed var(--color-border-strong);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-3);
+}
+
+.ecp-biometry__frame--ok {
+  border-style: solid;
+  border-color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.ecp-biometry__face {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-muted);
+  box-shadow: inset 0 -10px 0 var(--color-border);
+}
+
+.ecp-biometry__hint {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--color-text-secondary);
+}
+
+.ecp-biometry__stages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ecp-biometry__stage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-caption-size);
+  color: var(--color-text-tertiary);
+}
+
+.ecp-biometry__stage--active {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.ecp-biometry__stage--done {
+  color: var(--color-text-primary);
+}
+
+.ecp-biometry__stage-mark {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.ecp-biometry__stage--done .ecp-biometry__stage-mark {
+  background: var(--color-success-bg);
+  border-color: var(--color-success);
+  color: var(--color-success-text);
+}
+
+.ecp-result {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-input);
+  background: var(--color-success-bg);
+  color: var(--color-success-text);
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+}
+
+.ecp-docs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ecp-doc {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-tile);
+}
+
+.ecp-doc__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.ecp-doc__title {
+  font-size: var(--text-body-size);
+  font-weight: 600;
+}
+
+.ecp-doc__note,
+.ecp-doc__sign {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  color: var(--color-text-secondary);
+}
+
+.ecp-doc__sign {
+  margin-top: var(--space-1);
+  color: var(--color-success-text);
+  overflow-wrap: anywhere;
+}
+
+.ecp-doc__status {
+  flex: none;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.ecp-doc__status--ok {
+  color: var(--color-success-text);
+  font-weight: 600;
+}

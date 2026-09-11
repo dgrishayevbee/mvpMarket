@@ -430,3 +430,66 @@
   line-height: var(--text-caption-line);
   color: var(--color-text-secondary);
 }
+
+/* --- Предложение зарегистрироваться перед оплатой --- */
+
+.checkout-page__signup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-tile);
+  background: var(--color-surface-muted);
+}
+
+.checkout-page__signup-title {
+  font-size: var(--text-body-size);
+  font-weight: 600;
+}
+
+.checkout-page__signup-text {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+  color: var(--color-text-secondary);
+}
+
+.checkout-page__signup-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.checkout-page__signup-list li {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line);
+}
+
+.checkout-page__signup-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-yellow);
+}
+
+.checkout-page__signup-cta {
+  display: block;
+}
+
+.checkout-page__signup-cta .btn {
+  width: 100%;
+}
+
+.checkout-page__signup-link {
+  color: var(--color-ink);
+  font-weight: 600;
+}

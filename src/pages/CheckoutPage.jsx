@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import { useOrders } from "../context/OrdersContext.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
@@ -155,7 +155,7 @@ function OrderItemCard({ item, onQty }) {
 export function CheckoutPage() {
   const { items, subtotal, setQty, clear } = useCart();
   const { createOrder } = useOrders();
-  const { user } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const { content } = useContent();
   const navigate = useNavigate();
 
@@ -207,7 +207,34 @@ export function CheckoutPage() {
               <span className="checkout-page__total">{formatPrice(subtotal)}</span>
             </div>
 
-            <Button onClick={goNext}>Далее — к оплате</Button>
+            {isAuthenticated ? (
+              <Button onClick={goNext}>Далее — к оплате</Button>
+            ) : (
+              <div className="checkout-page__signup">
+                <span className="checkout-page__signup-title">
+                  Для оформления нужен аккаунт компании
+                </span>
+                <p className="checkout-page__signup-text">
+                  Услуги подключаются на юридическое лицо: регистрация идёт по ЭЦП, данные
+                  компании подтянутся из сертификата, договоры подпишете электронной подписью —
+                  без визита в офис. Корзина сохранится.
+                </p>
+                <ul className="checkout-page__signup-list">
+                  <li>Вход по ключу ЭЦП или через eGov mobile</li>
+                  <li>Подтверждение личности подписанта — Verigram Face ID</li>
+                  <li>Договор-оферта и согласия подписываются ЭЦП онлайн</li>
+                </ul>
+                <Link to="/register?next=/checkout" className="checkout-page__signup-cta">
+                  <Button>Зарегистрироваться по ЭЦП</Button>
+                </Link>
+                <span className="checkout-page__hint">
+                  Уже есть аккаунт компании?{" "}
+                  <Link to="/login?next=/checkout" className="checkout-page__signup-link">
+                    Войти
+                  </Link>
+                </span>
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -287,12 +314,18 @@ export function CheckoutPage() {
                 <dl className="checkout-page__req-list">
                   <div>
                     <dt>Компания</dt>
-                    <dd>{COMPANY.payer}</dd>
+                    <dd>{user?.company || COMPANY.payer}</dd>
                   </div>
                   <div>
                     <dt>БИН</dt>
-                    <dd>{COMPANY.bin}</dd>
+                    <dd>{user?.bin || COMPANY.bin}</dd>
                   </div>
+                  {user?.method === "ecp" && (
+                    <div>
+                      <dt>Подписант (ЭЦП)</dt>
+                      <dd>{user.name}</dd>
+                    </div>
+                  )}
                   <div>
                     <dt>Договор</dt>
                     <dd>{COMPANY.contract}</dd>

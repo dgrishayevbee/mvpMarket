@@ -18,6 +18,19 @@ export function AuthProvider({ children }) {
       register(name, email) {
         setUser({ name: name || email.split("@")[0] || "Пользователь", email });
       },
+      // B2B-регистрация: аккаунт заводится на компанию, подписант известен
+      // из сертификата ЭЦП.
+      registerCompany({ company, bin, signer, iin, email, phone }) {
+        setUser({
+          name: signer || company || "Пользователь",
+          email,
+          phone,
+          company,
+          bin,
+          iin,
+          method: "ecp",
+        });
+      },
       logout() {
         setUser(null);
         setSellerMode(false);
