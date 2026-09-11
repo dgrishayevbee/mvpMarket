@@ -399,3 +399,7 @@ Hobby достаточно: он рассчитан на личные/неком
   тарифов в `public/images/tariffs` (в экспорте одна лежала base64-строкой —
   такие в код не берём). `.tariff-card__image` переведён с `cover` на
   `contain`: у иллюстраций прозрачный фон и поля по краям.
+- **2026-09-11** — видео-блок главной получил обложку
+  `/images/video-cover-workspace.jpg` (набор `mvpmarketvideocover.zip`);
+  второй вариант `video-cover-network.jpg` лежит рядом и переключается одной
+  строкой в `siteContent.video.imageUrl` или через `/admin`.

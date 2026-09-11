@@ -215,7 +215,7 @@ export const defaultContent = {
   ],
   video: {
     caption: "Кратко рассказываем о преимуществах интернета для бизнеса",
-    imageUrl: ""
+    imageUrl: "/images/video-cover-workspace.jpg"
   },
   businessChoice: {
     sectionTitle: "Что выбирают предприниматели",
