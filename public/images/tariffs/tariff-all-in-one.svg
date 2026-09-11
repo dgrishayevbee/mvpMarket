@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" fill="none"><defs>
+  <linearGradient id="tariff_all_in_one_white" x1="0.2" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DFE3E9"/>
+  </linearGradient>
+  <linearGradient id="tariff_all_in_one_white2" x1="0.2" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#FAFBFC"/><stop offset="1" stop-color="#CFD5DD"/>
+  </linearGradient>
+  <linearGradient id="tariff_all_in_one_dark" x1="0.2" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#474D57"/><stop offset="1" stop-color="#1B1E23"/>
+  </linearGradient>
+  <linearGradient id="tariff_all_in_one_yellow" x1="0" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#FFE066"/><stop offset="1" stop-color="#F5A623"/>
+  </linearGradient>
+  <radialGradient id="tariff_all_in_one_glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FFCC00" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#FFCC00" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="tariff_all_in_one_soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#1B2430" flood-opacity="0.18"/>
+  </filter>
+  <filter id="tariff_all_in_one_soft2" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1B2430" flood-opacity="0.16"/>
+  </filter>
+  <filter id="tariff_all_in_one_blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="14"/>
+  </filter>
+</defs>
+<ellipse cx="320" cy="336" rx="176" ry="20" fill="#8A93A0" opacity="0.30" filter="url(#tariff_all_in_one_blur)"/>
+<circle cx="200" cy="150" r="140" fill="url(#tariff_all_in_one_glow)"/>
+
+<!-- задняя карточка: дашборд CRM -->
+<g transform="rotate(-9 260 190)" filter="url(#tariff_all_in_one_soft)">
+  <rect x="130" y="92" width="246" height="188" rx="24" fill="url(#tariff_all_in_one_white)"/>
+  <rect x="154" y="118" width="104" height="12" rx="6" fill="#C3C9D2"/>
+  <rect x="154" y="196" width="34" height="58" rx="10" fill="#C3C9D2"/>
+  <rect x="200" y="168" width="34" height="86" rx="10" fill="url(#tariff_all_in_one_yellow)"/>
+  <rect x="246" y="186" width="34" height="68" rx="10" fill="#8A93A0"/>
+  <rect x="292" y="146" width="34" height="108" rx="10" fill="url(#tariff_all_in_one_dark)"/>
+</g>
+
+<!-- передняя карточка: документ -->
+<g transform="rotate(7 400 216)" filter="url(#tariff_all_in_one_soft)">
+  <path d="M300 120 h122 l54 54 v140 a22 22 0 0 1 -22 22 h-154 a22 22 0 0 1 -22 -22 v-172 a22 22 0 0 1 22 -22 z" fill="url(#tariff_all_in_one_white2)"/>
+  <path d="M422 120 l54 54 h-36 a18 18 0 0 1 -18 -18 z" fill="#C3C9D2"/>
+  <g fill="#AFB6C0">
+    <rect x="306" y="196" width="120" height="11" rx="5.5"/>
+    <rect x="306" y="222" width="150" height="11" rx="5.5"/>
+    <rect x="306" y="248" width="96" height="11" rx="5.5"/>
+  </g>
+  <rect x="306" y="278" width="70" height="11" rx="5.5" fill="url(#tariff_all_in_one_yellow)"/>
+</g>
+
+<!-- бейдж с шестерёнкой -->
+<g filter="url(#tariff_all_in_one_soft)">
+  <circle cx="212" cy="288" r="54" fill="url(#tariff_all_in_one_dark)"/>
+</g>
+<rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(0.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(45.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(90.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(135.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(180.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(225.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(270.0 212 288)"/><rect x="205.5" y="256.5" width="13" height="15" rx="4" fill="#FFCC00" transform="rotate(315.0 212 288)"/><circle cx="212" cy="288" r="24.0" fill="#FFCC00"/><circle cx="212" cy="288" r="10.0" fill="#2B2D33"/>
+<circle cx="192" cy="266" r="9" fill="#FFFFFF" opacity="0.16"/></svg>

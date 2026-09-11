@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" fill="none"><defs>
+  <linearGradient id="tariff_office_internet_white" x1="0.2" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DFE3E9"/>
+  </linearGradient>
+  <linearGradient id="tariff_office_internet_white2" x1="0.2" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#FAFBFC"/><stop offset="1" stop-color="#CFD5DD"/>
+  </linearGradient>
+  <linearGradient id="tariff_office_internet_dark" x1="0.2" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#474D57"/><stop offset="1" stop-color="#1B1E23"/>
+  </linearGradient>
+  <linearGradient id="tariff_office_internet_yellow" x1="0" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#FFE066"/><stop offset="1" stop-color="#F5A623"/>
+  </linearGradient>
+  <radialGradient id="tariff_office_internet_glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FFCC00" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#FFCC00" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="tariff_office_internet_soft" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#1B2430" flood-opacity="0.18"/>
+  </filter>
+  <filter id="tariff_office_internet_soft2" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1B2430" flood-opacity="0.16"/>
+  </filter>
+  <filter id="tariff_office_internet_blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="14"/>
+  </filter>
+</defs>
+<ellipse cx="316" cy="330" rx="150" ry="20" fill="#8A93A0" opacity="0.30" filter="url(#tariff_office_internet_blur)"/>
+<circle cx="316" cy="150" r="150" fill="url(#tariff_office_internet_glow)"/>
+<path d="M248 150 a52 52 0 0 1 104 0" fill="none" stroke="url(#tariff_office_internet_yellow)" stroke-width="14" stroke-linecap="round" opacity="0.95"/><path d="M210 126 a90 90 0 0 1 180 0" fill="none" stroke="url(#tariff_office_internet_yellow)" stroke-width="12" stroke-linecap="round" opacity="0.73"/><path d="M172 102 a128 128 0 0 1 256 0" fill="none" stroke="url(#tariff_office_internet_yellow)" stroke-width="10" stroke-linecap="round" opacity="0.51"/>
+
+<!-- антенны -->
+<g filter="url(#tariff_office_internet_soft2)">
+  <rect x="196" y="176" width="15" height="86" rx="7.5" fill="url(#tariff_office_internet_dark)" transform="rotate(-18 203 220)"/>
+  <rect x="424" y="176" width="15" height="86" rx="7.5" fill="url(#tariff_office_internet_dark)" transform="rotate(18 431 220)"/>
+</g>
+
+<!-- корпус роутера -->
+<g filter="url(#tariff_office_internet_soft)">
+  <path d="M190 286 h252 a30 30 0 0 1 30 30 v2 a14 14 0 0 1 -14 14 h-284 a14 14 0 0 1 -14 -14 v-2 a30 30 0 0 1 30 -30 z" fill="url(#tariff_office_internet_white2)"/>
+  <rect x="160" y="242" width="312" height="56" rx="26" fill="url(#tariff_office_internet_white)"/>
+</g>
+<rect x="178" y="252" width="140" height="10" rx="5" fill="#FFFFFF" opacity="0.7"/>
+<g>
+  <circle cx="392" cy="270" r="8" fill="url(#tariff_office_internet_yellow)"/>
+  <circle cx="418" cy="270" r="8" fill="#8CD27A"/>
+  <circle cx="444" cy="270" r="8" fill="#C3C9D2"/>
+</g>
+<rect x="180" y="266" width="120" height="8" rx="4" fill="#C3C9D2"/></svg>

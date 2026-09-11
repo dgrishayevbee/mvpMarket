@@ -2,46 +2,104 @@
 // (см. src/context/ContentContext.jsx). Значения ниже — дефолты, которые
 // используются, пока в localStorage нет сохранённых правок.
 //
-// Текущие дефолты включают правки, присланные пользователем 2026-09-10
-// (docs/content-template.json) — сокращённый список категорий, переименованные
-// готовые пакеты/цены. Пустой quickLink "new" (label: "") из присланного файла
-// убран — пустой лейбл был попыткой удалить пункт до того, как в /admin
-// появилась кнопка удаления для быстрых ссылок.
+// Текущие дефолты — экспорт контента из /admin от 2026-09-11
+// (docs/content-2026-09-11.json): тексты решений, пакетов и тарифов от
+// пользователя. Поверх экспорта проставлены картинки, которых в нём не было:
+// иконки решений и пакетов из набора и иллюстрации тарифов в
+// public/images/tariffs (в экспорте одна из них лежала base64-строкой).
 export const defaultContent = {
   categories: [
-    { id: "employees", label: "Для работы сотрудников", icon: "nav-employees" },
-    { id: "internet", label: "Интернет для бизнеса", icon: "nav-internet" },
-    { id: "sales", label: "Продажи и работа с клиентами", icon: "nav-sales" },
-    { id: "management", label: "Управление бизнесом", icon: "nav-management" },
-    { id: "ai", label: "AI для бизнеса", icon: "nav-ai" },
+    {
+      id: "employees",
+      label: "Для работы сотрудников",
+      icon: "nav-employees"
+    },
+    {
+      id: "internet",
+      label: "Интернет для бизнеса",
+      icon: "nav-internet"
+    },
+    {
+      id: "sales",
+      label: "Продажи и работа с клиентами",
+      icon: "nav-sales"
+    },
+    {
+      id: "management",
+      label: "Управление бизнесом",
+      icon: "nav-management"
+    },
+    {
+      id: "ai",
+      label: "AI для бизнеса",
+      icon: "nav-ai"
+    }
   ],
-
   quickLinks: [
-    { id: "bundles", label: "Готовые пакеты", icon: "nav-packages" },
-    { id: "popular", label: "Популярные решения", icon: "nav-popular" },
-    { id: "favorites", label: "Избранное", icon: "nav-favorites", to: "/profile#favorites" },
-    { id: "subscriptions", label: "Мои подписки", icon: "nav-subscriptions", to: "/profile" },
-    { id: "orders", label: "История заказов", icon: "nav-orders", to: "/profile" },
+    {
+      id: "bundles",
+      label: "Готовые пакеты",
+      icon: "nav-packages"
+    },
+    {
+      id: "favorites",
+      label: "Избранное",
+      icon: "nav-favorites",
+      to: "/profile#favorites"
+    },
+    {
+      id: "subscriptions",
+      label: "Мои платежи",
+      icon: "nav-subscriptions",
+      to: "/profile"
+    },
+    {
+      id: "orders",
+      label: "История заказов",
+      icon: "nav-orders",
+      to: "/profile"
+    }
   ],
-
   supportLinks: [
-    { id: "support", label: "Поддержка", icon: "nav-support" },
-    { id: "requests", label: "История заявок", icon: "nav-orders" },
+    {
+      id: "support",
+      label: "Поддержка",
+      icon: "nav-support"
+    },
+    {
+      id: "requests",
+      label: "История заявок",
+      icon: "nav-orders"
+    }
   ],
-
   segments: [
-    { id: "all", label: "Все решения" },
-    { id: "business", label: "Решения для вашего бизнеса" },
-    { id: "office", label: "Офис и совместная работа" },
-    { id: "trade", label: "Для торговли" },
+    {
+      id: "all",
+      label: "Все решения"
+    },
+    {
+      id: "business",
+      label: "Решения для вашего бизнеса"
+    },
+    {
+      id: "office",
+      label: "Офис и совместная работа"
+    },
+    {
+      id: "trade",
+      label: "Для торговли"
+    }
   ],
-
   hero: {
     title: "Подберём инфраструктуру для вашего бизнеса",
     searchPlaceholder: "Опишите вашу задачу или спросите ИИ…",
-    prompts: ["Обслужить себя", "Открыть офис", "Автоматизировать продажи", "Подобрать бизнес"],
+    prompts: [
+      "Все инструменты для предпринимателя",
+      "Бухгалтерия и crm для большого бизнеса",
+      "Автоматизировать продажи",
+      "Подобрать бизнес решения"
+    ]
   },
-
   solutions: [
     {
       id: "sol-ms365",
@@ -51,8 +109,13 @@ export const defaultContent = {
       imageUrl: "/images/icons/solutions/sol-ms365.svg",
       category: "it-cloud",
       segment: "office",
-      tags: ["Облачный сервис", "Хит"],
-      badges: ["hit"],
+      tags: [
+        "Облачный сервис",
+        "Хит"
+      ],
+      badges: [
+        "hit"
+      ],
       price: 1833,
       billing: "в месяц",
       singleCta: true,
@@ -60,9 +123,12 @@ export const defaultContent = {
       rating: 4.8,
       reviewsCount: 96,
       stock: 999,
-      features: ["Word, Excel, PowerPoint", "5 пользователей", "1 ТБ облачного хранилища"],
-      description:
-        "Набор офисных приложений и облачное хранилище для команды — работайте над документами вместе, из любого места.",
+      features: [
+        "Word, Excel, PowerPoint",
+        "5 пользователей",
+        "1 ТБ облачного хранилища"
+      ],
+      description: "Набор офисных приложений и облачное хранилище для команды — работайте над документами вместе, из любого места."
     },
     {
       id: "sol-starter",
@@ -72,17 +138,25 @@ export const defaultContent = {
       imageUrl: "/images/icons/solutions/sol-starter.svg",
       category: "internet",
       segment: "business",
-      tags: ["Расширяем", "Хит"],
-      badges: ["hit"],
+      tags: [
+        "Расширяем",
+        "Хит"
+      ],
+      badges: [
+        "hit"
+      ],
       price: 15000,
       billing: "в месяц",
       seller: "mvpMarket",
       rating: 4.6,
       reviewsCount: 54,
       stock: 999,
-      features: ["WhatsApp — безлимит", "Telegram — безлимит", "Cashback 7%"],
-      description:
-        "Мобильная связь и мессенджеры без ограничений для небольшой команды — чтобы оставаться на связи с клиентами.",
+      features: [
+        "WhatsApp — безлимит",
+        "Telegram — безлимит",
+        "Cashback 7%"
+      ],
+      description: "Мобильная связь и мессенджеры без ограничений для небольшой команды — чтобы оставаться на связи с клиентами."
     },
     {
       id: "sol-sales",
@@ -92,16 +166,26 @@ export const defaultContent = {
       imageUrl: "/images/icons/solutions/sol-sales.svg",
       category: "sales",
       segment: "business",
-      tags: ["Продажи", "Новинка"],
-      badges: ["new"],
+      tags: [
+        "Продажи",
+        "Новинка"
+      ],
+      badges: [
+        "new"
+      ],
       price: 25000,
       billing: "в месяц",
       seller: "mvpMarket",
       rating: 4.5,
       reviewsCount: 31,
       stock: 999,
-      features: ["WhatsApp — безлимит", "Telegram — безлимит", "Cashback 7%"],
+      features: [
+        "WhatsApp — безлимит",
+        "Telegram — безлимит",
+        "Cashback 7%"
+      ],
       description: "Инструменты для роста продаж: чаты с клиентами, кешбэк на покупки, безлимитная связь.",
+      singleCta: false
     },
     {
       id: "sol-trade",
@@ -111,7 +195,9 @@ export const defaultContent = {
       imageUrl: "/images/icons/solutions/sol-trade.svg",
       category: "sales",
       segment: "trade",
-      tags: ["Торговля и продажи"],
+      tags: [
+        "Торговля и продажи"
+      ],
       badges: [],
       price: 40000,
       billing: "в месяц",
@@ -119,147 +205,157 @@ export const defaultContent = {
       rating: 4.4,
       reviewsCount: 22,
       stock: 999,
-      features: ["WhatsApp — безлимит", "Telegram — безлимит", "Cashback 7%"],
-      description: "Пакет связи и сервисов для точек продаж и сферы услуг.",
-    },
-    {
-      id: "sol-office",
-      title: "Всё для эффективной работы",
-      subtitle: "Бизнес-Офис",
-      icon: "💼",
-      imageUrl: "/images/icons/solutions/sol-office.svg",
-      category: "employees",
-      segment: "office",
-      tags: ["Работа в офисе", "Хит"],
-      badges: ["hit"],
-      price: 2900,
-      billing: "в месяц",
-      seller: "mvpMarket",
-      rating: 4.7,
-      reviewsCount: 68,
-      stock: 999,
-      features: ["WhatsApp — безлимит", "Telegram — безлимит", "Cashback 7%"],
-      description: "Связь и мессенджеры для всей команды офиса в одном пакете.",
-    },
-    {
-      id: "sol-1c",
-      title: "Автоматизация учёта и бизнес-процессов",
-      subtitle: "1С: Бухгалтерия Cloud",
-      icon: "🧮",
-      imageUrl: "/images/icons/solutions/sol-1c.svg",
-      category: "management",
-      segment: "business",
-      tags: ["Автоматизация", "Хит"],
-      badges: ["hit"],
-      price: 2100,
-      billing: "в месяц",
-      seller: "mvpMarket",
-      rating: 4.6,
-      reviewsCount: 40,
-      stock: 999,
-      features: ["WhatsApp — безлимит", "Telegram — безлимит", "Cashback 7%"],
-      description: "Облачная бухгалтерия без установки — доступ из любой точки, автоматическая отчётность.",
-    },
+      features: [
+        "WhatsApp — безлимит",
+        "Telegram — безлимит",
+        "Cashback 7%"
+      ],
+      description: "Пакет связи и сервисов для точек продаж и сферы услуг."
+    }
   ],
-
   video: {
     caption: "Кратко рассказываем о преимуществах интернета для бизнеса",
-    imageUrl: "",
+    imageUrl: ""
   },
-
   businessChoice: {
     sectionTitle: "Что выбирают предприниматели",
     interactiveTariff: {
       basePrice: 1590,
-      speeds: [10, 15, 25],
+      speeds: [
+        10,
+        15,
+        25
+      ],
       defaultSpeedIndex: 1,
       minGb: 10,
       maxGb: 500,
       stepGb: 10,
-      defaultGb: 100,
+      defaultGb: 100
     },
     simpleTariffs: [
       {
         id: "starlink",
-        title: "Starlink",
-        subtitle: "Спутниковый интернет нового поколения",
+        title: "Интернет для офиса",
+        subtitle: "Покройте весь офис выгодным качественным интернетом",
         icon: "🛰️",
-        imageUrl: "",
+        imageUrl: "/images/tariffs/tariff-office-internet.svg",
         price: 193000,
-        billing: "",
+        billing: ""
       },
       {
         id: "office-internet",
-        title: "Интернет в офис",
-        subtitle: "Скоростной и надёжный интернет для сотрудников офиса",
+        title: "Корпоративная связь",
+        subtitle: "АТС и бесперебойная связь",
         icon: "🏢",
-        imageUrl: "",
+        imageUrl: "/images/tariffs/tariff-corp-call.svg",
         price: 14290,
-        billing: "/мес",
+        billing: "/мес"
       },
       {
         id: "jelide",
-        title: "Jelide",
-        subtitle: "Резервный интернет для бесперебойной работы Вашего бизнеса",
+        title: "Пакет под все",
+        subtitle: "CRM + 1C + Документооборот",
         icon: "📶",
-        imageUrl: "",
+        imageUrl: "/images/tariffs/tariff-all-in-one.svg",
         price: 115900,
-        billing: "",
-      },
-    ],
+        billing: ""
+      }
+    ]
   },
-
   bundles: [
     {
       id: "bundle-small-office",
-      title: "Для небольшой команды",
-      subtitle: "Интернет, Wi-Fi, Microsoft 365 и телефония в одном счёте",
+      title: "Начни бизнес с нуля",
+      subtitle: "Всё для продуктивной работы небольшой команды",
       imageUrl: "/images/icons/solutions/bundle-solo.svg",
       price: 7900,
       oldPrice: 15000,
       seller: "mvpMarket",
-      features: ["Интернет 100 Мбит/с", "Wi-Fi для офиса", "Microsoft 365", "Виртуальная АТС"],
+      features: [
+        "Интернет 100 Мбит/с",
+        "Wi-Fi для офиса",
+        "Microsoft 365",
+        "Виртуальная АТС"
+      ]
     },
     {
       id: "bundle-corporate",
-      title: "Для офиса и филиалов",
-      subtitle: "Гигабитный интернет, корпоративная связь и облачные серверы",
+      title: "Всё для эффективной работы команды",
+      subtitle: "Полная ИТ-инфраструктура крупного бизнеса",
       imageUrl: "/images/icons/solutions/bundle-office.svg",
       price: 11000,
       oldPrice: 19900,
       seller: "mvpMarket",
-      features: ["Интернет 1 Гбит/с", "Корпоративная связь", "Видеонаблюдение Pro", "Облачные серверы"],
+      features: [
+        "Интернет 1 Гбит/с",
+        "Корпоративная связь",
+        "Видеонаблюдение Pro",
+        "Облачные серверы"
+      ]
     },
     {
       id: "bundle-cloud-storage",
-      title: "Для хранения и защиты данных",
-      subtitle: "Резервное копирование, шифрование и облачные бэкапы",
+      title: "Безопасное хранение данных",
+      subtitle: "Обезопасьте данные своей компании и сотрудников",
       imageUrl: "/images/icons/solutions/bundle-trade.svg",
       price: 14990,
       oldPrice: 24900,
       seller: "mvpMarket",
-      features: ["Резервное копирование", "100 ГБ хранилища", "Шифрование данных", "Облачные бэкапы"],
-    },
+      features: [
+        "Резервное копирование",
+        "100 ГБ хранилища",
+        "Шифрование данных",
+        "Облачные бэкапы"
+      ]
+    }
   ],
-
   aiBanner: {
     title: "Решите свою задачу с нашим ИИ-ассистентом",
     subtitle: "Расскажите о задачах — подберём решения для роста и защиты компании.",
     ctaLabel: "Попробовать сейчас",
     suggestions: [
-      { emoji: "🧑‍💼", text: "Открываю офис на 30 сотрудников" },
-      { emoji: "📶", text: "Организовать Wi-Fi для офиса" },
-      { emoji: "🏠", text: "Настроить удалённую работу" },
-    ],
+      {
+        emoji: "🧑‍💼",
+        text: "Открываю офис на 30 сотрудников"
+      },
+      {
+        emoji: "📶",
+        text: "Организовать Wi-Fi для офиса"
+      },
+      {
+        emoji: "🏠",
+        text: "Настроить удалённую работу"
+      }
+    ]
   },
-
   footer: {
     columns: {
-      business: ["Мобильная связь", "Интернет для бизнеса", "Продажи и работа с клиентами", "Управление бизнесом"],
-      company: ["О нас", "Контакты", "Вакансии", "Партнёрам"],
-      solutions: ["Готовые пакеты", "Популярные решения", "Новинки"],
-      help: ["Поддержка", "История заявок", "Частые вопросы"],
+      business: [
+        "Мобильная связь",
+        "Интернет для бизнеса",
+        "Продажи и работа с клиентами",
+        "Управление бизнесом"
+      ],
+      company: [
+        "О нас",
+        "Контакты",
+        "Вакансии",
+        "Партнёрам"
+      ],
+      solutions: [
+        "Готовые пакеты",
+        "Популярные решения",
+        "Новинки"
+      ],
+      help: [
+        "Поддержка",
+        "История заявок",
+        "Частые вопросы"
+      ]
     },
-    contact: { shortNumber: "7900", phone: "+7 (727) 259 9000" },
-  },
+    contact: {
+      shortNumber: "7900",
+      phone: "+7 (727) 259 9000"
+    }
+  }
 };
